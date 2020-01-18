@@ -1,11 +1,11 @@
 class farm extends Object {
   constructor(){
     super();
-    var growAmount = 0;
-    var growPerTick = 1;
-    var plantedSeeds = 0;
-    var planted = false;
-    var harvestable = false;
+    this.growAmount = 0;
+    this.growPerTick = 1;
+    this.plantedSeeds = 0;
+    this.planted = false;
+    this.harvestable = false;
 
     //Upgrades
 

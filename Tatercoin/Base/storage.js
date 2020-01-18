@@ -1,22 +1,22 @@
 class storage extends Object {
   constructor() {
     super();
-    var seeds = 0;
-    var hasSeeds = false;
-    var potatoes = 0;
-    var hasPotatoes = false;
-    var peeledPotatoes = 0;
-    var hasPeeledPotatoes = false;
-    var slicedPotatoes = 0;
-    var hasSlicedPotatoes = false;
-    var seasonedSlicedPotatoes = 0;
-    var hasSeasonedSlicedPotatoes = false;
-    var potatoChips = 0;
-    var hasPotatoChips = false;
+    this.seeds = 0;
+    this.hasSeeds = false;
+    this.potatoes = 0;
+    this.hasPotatoes = false;
+    this.peeledPotatoes = 0;
+    this.hasPeeledPotatoes = false;
+    this.slicedPotatoes = 0;
+    this.hasSlicedPotatoes = false;
+    this.seasonedSlicedPotatoes = 0;
+    this.hasSeasonedSlicedPotatoes = false;
+    this.potatoChips = 0;
+    this.hasPotatoChips = false;
 
     //Upgrades
-    var level1Upgrade = false;
-    var level2Upgrade = false;
-    var level3Upgrade = false;
+    this.level1Upgrade = false;
+    this.level2Upgrade = false;
+    this.level3Upgrade = false;
   }
 }
