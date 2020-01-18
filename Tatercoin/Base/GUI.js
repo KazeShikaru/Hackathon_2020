@@ -13,11 +13,13 @@ class GUI
 
     //set the canvas size
     //the canvas needs to be initialized first
-    set_Size()
+    set_size()
     {
-        this.width = $(window).width();
+        console.log('set size');
+        this.width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
         this.height = this.width/this.proportion;
-
         this.cell_w = this.width/32;
         this.cell_h = this.width/32;
 
@@ -26,16 +28,21 @@ class GUI
         this.context.canvas.height = this.height;
         
         //call something that resizes objects
-
+        console.log('set size done  ');
     }
 
     init()
     {
-        this.canvas =  document.getElementById('canvas');
-        this.context = canvas.getContext('2d');
 
-        this.set_Size();
+        this.canvas =   document.getElementById('canvas');
+        this.context = canvas.getContext('2d');
+        console.log(this.canvas);
+        console.log(this.context);
+
+        console.log("init canvas size");
+        this.set_size();
         this.context.fillStyle = 'black';
+        this.context.fillRect(10, 10, 150, 100)
 
     }
 }
