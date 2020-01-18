@@ -31,7 +31,7 @@ class GUI
 
     init()
     {
-        this.canvas = document.getElementById('canvas');
+        this.canvas =  document.getElementById('canvas');
         this.context = canvas.getContext('2d');
 
         this.set_Size();

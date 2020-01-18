@@ -10,6 +10,9 @@ class Object
         this.level = 0;
     }
 
-    execute();
+    execute()
+    {
+        
+    }
 
 }

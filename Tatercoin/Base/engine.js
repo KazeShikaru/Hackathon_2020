@@ -14,9 +14,8 @@ class Engine
     {
         this.time_constant = 0.0166667;
         this.time = new Timer();
-        this.objects = [];
-        this.grid = new Cell[32][18];
-        this.gui = GUI();
+        this.grid = new Array(32);
+        this.gui = new GUI();
     }
     
     add_object()
@@ -36,13 +35,22 @@ class Engine
 
     init()
     {
+        for(var i=0;i<32;i++)
+        {
+            this.grid[i] = new Array(18);
+            for(var j=0;j<18;j++)
+            {
+                this.grid[i][j] = new Cell();
+            }
+        }
+
         this.gui.init();
     }
 
     run()
     {
         this.time.restart();
-
+        console.log("run engine");
         while(true)
         {
             
@@ -78,12 +86,18 @@ class Engine
 }
 
 
-$($document).ready(function()
+$(document).ready(function()
 {
-    var game = Engine();
+    var game = new Engine();
 
+    console.log("instantiate engine");
     game.load();
+
+    console.log("load engine");
     game.init();
+
+    console.log("init engine");
     game.run();
+
     
 });
