@@ -1,3 +1,13 @@
+/*
+    load        - loads game data from server
+    save        - save game data to server
+    init        - set game based on data from the server
+    add_objects - init existing objects
+    run         - run game loop
+    input()     - get player input
+    update()    -  update game logic
+    draw()      - draw info on canvas
+*/
 class Engine
 {
     constructor()
@@ -6,6 +16,7 @@ class Engine
         this.time = new Timer();
         this.objects = [];
         this.grid = new Cell[32][18];
+        this
     }
     
     add_object()
@@ -14,6 +25,16 @@ class Engine
     }
 
     load()
+    {
+
+    }
+
+    save()
+    {
+
+    }
+
+    init()
     {
 
     }
@@ -96,3 +117,13 @@ class Object
 
 
 }
+
+$($document).ready(function()
+{
+    var game = Engine();
+
+    game.load();
+
+    game.run();
+    
+});
