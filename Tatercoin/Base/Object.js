@@ -7,12 +7,11 @@ class Object
     {
         this.id = -1;
         this.name = "";
-        this.level = 0;
     }
 
     execute()
     {
-        
+
     }
 
 }
