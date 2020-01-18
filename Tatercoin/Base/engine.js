@@ -16,7 +16,7 @@ class Engine
         this.time = new Timer();
         this.objects = [];
         this.grid = new Cell[32][18];
-        this
+        this.gui = GUI();
     }
     
     add_object()
@@ -36,7 +36,7 @@ class Engine
 
     init()
     {
-
+        this.gui.init();
     }
 
     run()
@@ -83,7 +83,7 @@ $($document).ready(function()
     var game = Engine();
 
     game.load();
-
+    game.init();
     game.run();
     
 });
