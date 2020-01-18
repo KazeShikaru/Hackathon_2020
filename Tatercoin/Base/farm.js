@@ -4,5 +4,7 @@ class farm extends Object {
     var growPerTick = 1;
     var planted = false;
     var harvestable = false;
+
+    //Upgrades
   }
 }
