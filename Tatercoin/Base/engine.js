@@ -44,29 +44,20 @@ class Engine
             }
         }
 
+        console.log("init gui");
         this.gui.init();
     }
 
     run()
     {
-        this.time.restart();
         console.log("run engine");
-        while(true)
-        {
-            
-            if(this.time.get_time_millis() > this.time_constant)
-            {
-                //input
+        //input
 
-                //logic
+        //logic
                 
-                //draw
+        //draw
 
 
-                this.time.restart();
-            }
-
-        }
     }
 
     input()
@@ -97,7 +88,7 @@ $(document).ready(function()
     game.init();
 
     console.log("init engine");
-    game.run();
+    setInterval(game.run, 16);
 
     
 });
