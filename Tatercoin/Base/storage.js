@@ -1,5 +1,6 @@
 class storage extends Object {
   constructor() {
+    super();
     var seeds = 0;
     var hasSeeds = false;
     var potatoes = 0;

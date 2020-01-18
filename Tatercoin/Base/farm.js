@@ -1,5 +1,6 @@
 class farm extends Object {
   constructor(){
+    super();
     var growAmount = 0;
     var growPerTick = 1;
     var plantedSeeds = 0;
@@ -7,5 +8,6 @@ class farm extends Object {
     var harvestable = false;
 
     //Upgrades
+
   }
 }
