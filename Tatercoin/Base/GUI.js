@@ -59,8 +59,8 @@ class GUI
     // Prints grid
     draw_grid()
     {
-    	wid =  this.canvas.width -320;
-    	size = (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
+    	this.wid =  this.canvas.width -320;
+    	this.size = (this.wid/16 > this.canvas.height/9)?this.canvas.height/9:this.wid/16;
     	
         for(var i=0;i<16;i++)
         {
@@ -77,8 +77,8 @@ class GUI
     }
     
     draw_yard(){
-    	wid =  this.canvas.width -320;
-    	size = (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
+    	this.wid =  this.canvas.width -320;
+    	this.size = (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
     	var yard = ObjectManager.getYard();
     	console.log(yard);
     	var imageSrc = "";
