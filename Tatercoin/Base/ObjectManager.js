@@ -129,11 +129,11 @@ class ObjectManager
     static farmClicked()
     {
     	this.objRet(1).clicked = true;
-    	console.log("farm clicked");
+    	//console.log("farm clicked");
     }
     static storageClicked()
     {
     	this.objRet(2)
-    	console.log("storage clicked");
+    	//console.log("storage clicked");
     }
 }

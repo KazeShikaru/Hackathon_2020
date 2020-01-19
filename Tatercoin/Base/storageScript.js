@@ -6,7 +6,8 @@ function StorageS(element){
 		element.add = 0;
 		console.log(element.potatoes);
 	}
-	if(element.clicked = true)
+
+	if(element.clicked == true)
 	{
 		element.exportMarket = element.potatoes;
 		clicked = false;
