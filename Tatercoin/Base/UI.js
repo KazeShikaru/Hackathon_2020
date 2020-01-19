@@ -1,16 +1,19 @@
 
-$('#buy10Seeds').click()
+$('#buy10Seeds').click
 (
-    ObjectManager.buySeeds(10)
+    function(){ObjectManager.buySeeds(10);}
 );
 
-$('#buySeeds').click()
+$('#buySeeds').click
 (
-    ObjectManager.buySeeds(1)
+    function(){ ObjectManager.buySeeds(1);}
 );
 
 setInterval(function()
 {
+    document.getElementById("seeds").innerHTML = ObjectManager.getSeeds() + " Seeds";
+    document.getElementById("money").innerHTML = ObjectManager.getCoins() + " ₽";
+
     $('#seeds').html(ObjectManager.getSeeds() + " Seeds");
     $('#money').html(ObjectManager.getCoins() + " ₽");
 }, 50
