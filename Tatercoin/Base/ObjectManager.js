@@ -36,7 +36,7 @@ class ObjectManager
 
 	static buySeeds(amount)
 	{
-		if(amount < this.getCoins)
+		if(amount <= this.getCoins())
 		{
 			this.gameVariables.tatercoins -= amount;
 			this.gameVariables.seeds += amount *20;
