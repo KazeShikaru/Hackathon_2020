@@ -34,3 +34,13 @@ function storageS(element){
 	}
 	return 0;//return 0 no error.
 }
+
+function store(type, amount){
+	var stor = objRet("2");
+	switch(type){
+		case "potato":
+			stor.potatoes += amount;
+			store.hasPotatoes = true;
+			break;
+	}
+}
