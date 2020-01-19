@@ -76,6 +76,18 @@ class GUI
     			case 0:
     				imageSrc = "bin/Test1.PNG";
     				break;
+    			case 1:
+    				imageSrc = "bin/Test2.PNG";
+    				break;
+    			case 2:
+    				imageSrc = "bin/Test3.PNG";
+    				break;
+    			case 3:
+    				imageSrc = "bin/Test4.PNG";
+    				break;
+    			case 4:
+    				imageSrc = "bin/Test5.PNG";
+    				break;
     			
     			
     			
@@ -97,7 +109,7 @@ class GUI
     draw()
     {
         console.log("111111");
-    	this.draw_grid();
+    	//this.draw_grid();
     	this.draw_yard();
     }
 
