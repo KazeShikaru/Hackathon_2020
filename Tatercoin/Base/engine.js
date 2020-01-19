@@ -48,18 +48,6 @@ class Engine
         this.gui.init();
     }
 
-    run()
-    {
-        console.log("run engine");
-        //input
-
-        //logic
-                
-        //draw
-
-
-    }
-
     input()
     {
 
@@ -72,8 +60,25 @@ class Engine
 
     draw()
     {
+        
+    }
+
+    run()
+    {
+        //console.log("run engine");
+        //input
+        //this.input();
+
+        //logic
+        //this.update();
+                
+        //draw on canvas
+        this.gui.clear();
+        this.gui.draw_grid();
 
     }
+
+    
 }
 
 
