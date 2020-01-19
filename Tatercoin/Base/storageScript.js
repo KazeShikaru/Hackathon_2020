@@ -1,11 +1,9 @@
 function StorageS(element){
 	var element = ObjectManager.arr[2];
-	console.log(element.add);
 	if(element.add > 0)//checks if any potatoes to add
 	{
 		element.potatoes += element.add;// adds potatoes and resets add count
 		element.add = 0;
-		console.log(element.potatoes);
 	}
 	if(element.clicked == true)
 	{

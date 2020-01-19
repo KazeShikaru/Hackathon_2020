@@ -11,7 +11,6 @@ function farmS(){
 
 	if(element.clicked)
 	{
-		console.log(element.growProgress==600);
 		if(!element.planted)
 		{
 			plant(10);
@@ -34,7 +33,6 @@ function plant(seedsToPlant){
 		if(seedsToPlant <= seeds){//Make sure player has enough seeds
 			//console.log('Planting ' + seedsToPlant + ' seeds');
 			ObjectManager.setPlanted(true);
-			console.log(element.planted);
 			ObjectManager.setPlantedSeeds(seedsToPlant);
 			ObjectManager.setSeeds(seeds - seedsToPlant);
 			seeds = ObjectManager.getSeeds();
