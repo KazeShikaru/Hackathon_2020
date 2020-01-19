@@ -31,13 +31,13 @@ function plant(seedsToPlant){
 	var seeds = ObjectManager.getSeeds();
 	if(!element.planted){//Make sure not planted already
 		if(seedsToPlant <= seeds){//Make sure player has enough seeds
-			//console.log('Planting ' + seedsToPlant + ' seeds');
+			console.log('Planting ' + seedsToPlant + ' seeds');
 			ObjectManager.setPlanted(true);
 			ObjectManager.setPlantedSeeds(seedsToPlant);
 			ObjectManager.setSeeds(seeds - seedsToPlant);
 			seeds = ObjectManager.getSeeds();
 			element.growProgress = 0;
-			
+
 			//console.log('User now has '+seeds+' seeds');
 		}
 		else{
@@ -59,9 +59,9 @@ function harvest(){
 		ObjectManager.setPlantedSeeds(0);
 		element.growProgress = 0;
 		harvestYield = 0;
-		//console.log('Harvested with yield of '+harvestYield +' kg of raw potatoes');
+		console.log('Harvested with yield of '+harvestYield +' kg of raw potatoes');
 	}
 	else{
-		//console.log('Farm not planted');
+		console.log('Farm not planted');
 	}
 }
