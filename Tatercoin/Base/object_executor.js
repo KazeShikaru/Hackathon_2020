@@ -19,6 +19,14 @@ class object_executor
 	{
 		return this.gameVariables.tatercoins;// returns coin count from game variables
 	}
+	static addSeeds(seeds)
+	{
+		return this.gameVariables.seeds += seeds;// increment seeds by given amount
+	}
+	static addCoins(coin)
+	{
+		return this.gameVariables.tatercoins += coin// increment coins by given amount
+	}
 
 	static execute()
 	{
@@ -50,23 +58,23 @@ class object_executor
 		{
 			case 1:
 			//Run farm script if farm
-				return farm.run(element);
+				return farm.farmScript(element);
 				
 			case 2:
 			//Run storage script if storage
-				return storage.run(element);
+				return storage.storageScript(element);
 
 			case 3:
 			//Run Processing script if storage
-				return processing.run(element);
+				return processing.processingScript(element);
 
 			case 4:
 			//Run market script if Market
-				return market.run(element);
+				return market.marketS(element);
 
 			case 5:
 			//trukk
-				return trukk.run(element)
+				return trukk.trukkS(element)
 		}
 	}
 
