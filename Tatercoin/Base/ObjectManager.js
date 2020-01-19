@@ -30,13 +30,21 @@ class ObjectManager
 	}
 	static setSeeds(seeds)
 	{
-		return this.gameVariables.seeds = seeds;// increment seeds by given amount
+		this.gameVariables.seeds = seeds;// increment seeds by given amount
 	}
 	static addCoins(coin)
 	{
 		return this.gameVariables.tatercoins += coin// increment coins by given amount
 	}
 
+	//Fuck it
+	static setPlanted(p){
+		this.arr[1].planted = p;
+	}
+	static setPlantedSeeds(s){
+		this.arr[1].plantedSeeds = s;
+	}
+	
 	static execute()
 	{
 		for(var element in this.arr)//iterate through elements given per game tick
