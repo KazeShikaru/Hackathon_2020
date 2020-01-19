@@ -34,6 +34,12 @@ class ObjectManager
 		return this.gameVariables.tatercoins += coin// increment coins by given amount
 	}
 
+	static buySeeds(amount)
+	{
+		this.gameVariables.tatercoins -= amount;
+		this.gameVariables.seeds += amount *20;
+	}
+
 	//Fuck it
 	static setPlanted(p){
 		this.arr[1].planted = p;
