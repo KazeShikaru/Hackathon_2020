@@ -185,4 +185,9 @@ class ObjectManager
     static getSave(){
 
     }
+
+		static getStored(){
+			var storeObj = objRet(2);
+			return potatoes;
+		}
 }
