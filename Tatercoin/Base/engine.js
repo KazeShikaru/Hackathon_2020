@@ -12,7 +12,7 @@ class Engine
 {
     constructor()
     {
-        this.time_constant = 0.0166667;
+        
         this.grid = new Array(32);
         this.gui = new GUI();
     }
@@ -74,17 +74,3 @@ function run(game)
 }
 
 
-$(document).ready(function()
-{
-    var game = new Engine();
-
-    console.log("instantiate engine");
-    game.load();
-
-    console.log("load engine");
-    game.init();
-
-    console.log("init engine");
-    setInterval(function() { run(game); }, 16);
-    
-});
