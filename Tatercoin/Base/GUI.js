@@ -88,7 +88,7 @@ class GUI
 
     			switch(o){
     			case 0:
-    				imageSrc = "bin/Test1.PNG";
+    				imageSrc = "bin/grass.PNG";
     				break;
     			case 1:
     				imageSrc = "bin/Test2.PNG";
