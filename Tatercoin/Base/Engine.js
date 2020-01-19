@@ -13,13 +13,12 @@ class Engine
     //Initiates Engine
     start()
     {
-    	setInterval(function(eng) { this.gameloop(eng); }, 32,this);
+    	setInterval(function(eng) { this.gameloop(eng); }, 33,this);
 
         ObjectManager.build();
 
-        console.log("init gui");
-
         this.eventHandler.init(this.gui);
+        engine.gui.draw();
     }
 }
 
@@ -30,10 +29,8 @@ function gameloop(engine)
 
     engine.tick++;
     
-    if(engine.tick%60==0)
+    if(engine.tick%30==0)
     {
-        
-        
     	engine.gui.draw();
     	
     }
