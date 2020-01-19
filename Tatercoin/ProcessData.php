@@ -1,6 +1,43 @@
 <?php
     
-$save = $_POST['saveFile']; 
+$username = $_POST['username']; 
+
+$password = $_POST['password'];
+
+$requestType = $_POST['requestType'];
+
+$data = $_POST['data'];
+
+if($requestType == "Login"){
+    $sql = "SELECT username,password,data FROM Saves WHERE username = ".$username.";";
+    $result = executeQuerry($sql);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        if($row["password"]==$password){
+            echo $data;
+        }else{
+            echo "Invalid Password";
+            
+        }
+        
+    }else{
+        
+        echo "User No Exist";
+        
+    }
+    
+    
+    
+}else if($requestType == "Save"){
+    $sql = "UPDATE Saves SET data = \"".$data."\" WHERE username = ".$username.";";
+    
+    echo "saved";
+    
+}
+
+
+
+
 
 
 function executeQuerry($sql){
@@ -17,13 +54,13 @@ function executeQuerry($sql){
         die("Connection failed: " . $conn->connect_error);
     }
     
-    if ($conn->query($sql) === TRUE) {
-        echo "Table MyGuests created successfully";
-    } else {
-        echo "Error creating table: " . $conn->error;
-    }
+
+    
+    $result = $conn->query($sql);
+    
     
     $conn->close();
+    return $result;
 }
 
 
