@@ -1,9 +1,8 @@
 class object_manager
 {
-	static transfer( origin,  targ, amount)//update store amounts for the objects so they can trade
+	static transfer(targ, amount)//update store amounts for the objects so they can trade
 	{
-		origin.storeRemove(amount);
-		targ.storeAdd(amount);
+		targ.add= amount;
 	}
 	static execute( element)
 	{
