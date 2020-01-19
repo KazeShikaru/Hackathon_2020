@@ -8,15 +8,16 @@ module.exports = {
 		}
 		return null;
 	}
-	
+
 	//Plant a harvest of potatoes
 	function plant(seedsToPlant){
-		if(!_farm.planted){//Make sure not planted already
+		var seeds = getSeeds();
+		if(!element.planted){//Make sure not planted already
 			if(seedsToPlant <= seeds){//Make sure player has enough seeds
 				console.log('Planting ' + seedsToPlant + ' seeds');
-				_farm.planted = true;
-				_farm.plantedSeeds = seedsToPlant;
-				seeds-= seedsToPlant;
+				element.planted = true;
+				element.plantedSeeds = seedsToPlant;
+				setSeeds(seeds - seedsToPlant);
 				console.log('User now has '+seeds+' seeds');
 			}
 			else{
@@ -29,10 +30,13 @@ module.exports = {
 	}
 
 	function harvest(){
-		if(_farm.planted){//Make sure farm is planted
+		if(element.planted){//Make sure farm is planted
 			//TODO Get upgrade modifiers here when they're implemented
-			var harvestYield = _farm.plantedSeeds * math.random();
+			var harvestYield = element.plantedSeeds * math.random();
 			store("potatoes", harvestYield);
+			element.planted = false;
+			element.plantedSeeds = 0;
+			console.log('Harvested with yield of '+harvestYield+' kg of raw potatoes');
 		}
 		else{
 			console.log('Farm not planted');
