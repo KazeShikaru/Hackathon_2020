@@ -6,11 +6,11 @@ function farmS(element){
 		element.harvestable = true;
 	}
 	return null;
+	//Plant a harvest of potatoes
 }
 
-//Plant a harvest of potatoes
 function plant(seedsToPlant){
-	var seeds = objectManager.getSeeds();
+	var seeds = element.seeds;
 	if(!element.planted){//Make sure not planted already
 		if(seedsToPlant <= seeds){//Make sure player has enough seeds
 			console.log('Planting ' + seedsToPlant + ' seeds');
