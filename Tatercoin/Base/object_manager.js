@@ -42,9 +42,16 @@ class object_executor
 		for(element in this.array)//iterate through elements given per game tick
 		{
 			var ret = object_manager.execute(element);
-			if(ret != NULL)
+			if(ret != 0)
 			{
-
+				if(ret == -1)
+				{
+					//popup for not enough potatoes to transfer
+				}
+				else if(ret == -2)
+				{
+					//popup for incorrect infastructure to perform the action
+				}
 			}
 		}
 	}
