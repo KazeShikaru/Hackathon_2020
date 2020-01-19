@@ -5,6 +5,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="base/Timer.js"></script>
+    <script src="base/gameVariables.js"></script>
     <script src="base/Object.js"></script>
     <script src="base/farm.js"></script>
     <script src="base/storage.js"></script>
@@ -25,40 +26,5 @@
         <img id="test" src="bin/test_cell.png">
     </div>
 
-    <script>
-    //Game start
-
-    //Instantiate building objects
-    var _farm = new farm();
-    var _storage = new storage();
-    var _processing = new processing();
-
-    //Game variables
-    var seeds = 10;
-    var tatercoins = 0;
-
-    //Functions
-    plant(10);
-    //Plant a harvest of potatoes
-    function plant(seedsToPlant){
-      if(!_farm.planted){//Make sure not planted already
-        if(seedsToPlant <= seeds){//Make sure player has enough seeds
-          console.log('Planting ' + seedsToPlant + ' seeds');
-          _farm.planted = true;
-          _farm.plantedSeeds = seedsToPlant;
-        }
-        else{
-          console.log('Not enough seeds');
-        }
-      }
-      else{
-        console.log('Already planted');
-      }
-    }
-
-    function harvest(){
-
-    }
-    </script>
 
 </body>
