@@ -11,7 +11,8 @@ class EventHandler
     {
         this.gui = gui;
         this.cell_size = this.gui.returnSquareSize();
-        this.canvas.addEventListener('mousedown', e => {this.getGridPos(canvas, e)})
+        this.canvas.addEventListener('click', e => {this.getGridPos(canvas, e)})
+
     }
 
     getGridPos(canvas, event)
