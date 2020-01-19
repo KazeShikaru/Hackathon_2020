@@ -58,8 +58,8 @@ class object_executor
 			}
 		}
 	}
-	static objRet(value)
+	static objRet(value)//return object at index array
 	{
-		return this.arr[value];
+		return this.arr[value];// return object
 	}
 }
