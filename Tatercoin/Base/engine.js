@@ -12,7 +12,7 @@ class Engine
 {
     constructor()
     {
-        this.time_constant = 0.0166667;
+        
         this.grid = new Array(32);
         this.gui = new GUI();
     }
