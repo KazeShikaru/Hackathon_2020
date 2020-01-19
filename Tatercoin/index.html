@@ -1,12 +1,5 @@
 <!doctype html>
 <meta charset="UTF-8">
-
-<script>
-    var engine = null;
-    var objectManager = null;
-    var gui = null;
-</script>
-
 <head>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -38,18 +31,13 @@
     <script>
     var engine;
     var objectManager;
-    var gui;
     $(document).ready(function()
     		{
 				//Constructs Engine
 				engine = new Engine();
-    		    engine.start();
-    		    
+    		    engine.start();	    
 				//Constructs Object Manager
     		    objectManager = new ObjectManager();
-
-    		    //Constructs GUI    		    
-    		    gui = new GUI();
 
     		});
 

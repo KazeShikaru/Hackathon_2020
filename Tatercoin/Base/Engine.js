@@ -6,6 +6,7 @@ class Engine
     {
     	this.tick =0;
         this.time = new Timer();
+        this.gui = new GUI();
     }
 
     //Initiates Engine
@@ -15,7 +16,7 @@ class Engine
 
         console.log("init gui");
         
-        gui.init();
+        this.gui.init();
 
     }
 
