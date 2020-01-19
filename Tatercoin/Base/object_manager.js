@@ -40,7 +40,7 @@ class object_executor
 	}
 	execute()
 	{
-		for(element in array)//iterate through elements given per game tick
+		for(element in this.array)//iterate through elements given per game tick
 		{
 			var ret = object_manager.execute(element);
 			if(ret != NULL)
