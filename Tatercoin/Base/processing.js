@@ -1,6 +1,6 @@
 class processing extends Object {
   constructor(){
-    super();
+    super(3, "Processing");
     this.busy = false;
   }
 }

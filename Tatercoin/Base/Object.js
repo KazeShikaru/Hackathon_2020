@@ -3,10 +3,10 @@
 // 1 execute per tick
 class Object
 {
-    constructor()
+    constructor(id, name)
     {
-        this.id = -1;
-        this.name = "";
+        this.id = id;
+        this.name = name;
     }
 
     execute()
