@@ -35,7 +35,7 @@ function storageS(element){
 	return 0;//return 0 no error.
 }
 
-store(type, amount){
+function store(type, amount){
 	var stor = objRet("2");
 	switch(type){
 		case "potato":
