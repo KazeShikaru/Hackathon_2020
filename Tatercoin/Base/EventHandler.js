@@ -16,6 +16,7 @@ class EventHandler
 
     getGridPos(canvas, event)
     {
+        this.cell_size = this.gui.returnSquareSize();
         let rect = canvas.getBoundingClientRect(); 
         let x = event.clientX - rect.left;
         let y = event.clientY - rect.top;

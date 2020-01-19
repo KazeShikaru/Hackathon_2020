@@ -111,17 +111,18 @@ class ObjectManager
     static clickLocation(pos)
     {
         let x = pos%16;
-        let y = Math.floor(pos/16);
+		let y = Math.floor(pos/16);
+		//console.log(x + " " + y );
         switch(this.yard.getBuilding(x,y)[0])
         {
         	case "1":
-        	this.farmClicket();
-        	return;
+        		this.farmClicket();
+        		return;
         	case "2":
-        	this.storageClicked();
-        	return;
+        		this.storageClicked();
+        		return;
         	default:
-        	return;
+        		return;
         }
     }
 
