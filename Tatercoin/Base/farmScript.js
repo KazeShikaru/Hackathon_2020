@@ -1,6 +1,7 @@
 function farmS(element){
-	if(element.growAmount < 10 && element.planted === true){ // If planted, grow
+	if(element.growAmount < 10 && element.planted){ // If planted, grow
 		element.growAmount += element.growPerTick;
+		console.log('Grow amount: ' + element.growAmount);
 	}
 	else { // If fully grown, set harvestable
 		element.harvestable = true;
