@@ -17,6 +17,14 @@ function farmS(){
 	else {//Not planted
 		//console.log('not planted');
 	}
+
+	if(clicked)
+	{
+		element.plant(10);
+		element.harvest();
+		clicked = false;
+	}
+
 	return null;
 	//Plant a harvest of potatoes
 }

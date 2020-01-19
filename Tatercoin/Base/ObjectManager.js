@@ -111,6 +111,16 @@ class ObjectManager
     static clickLocation(pos)
     {
         let x = pos%16;
-        let y = Math.floor(pos/16); 
+        let y = Math.floor(pos/16);
+        this.yard.getBuilding(x,y);
+    }
+
+    static farmClicked()
+    {
+    	this.objRet(1).clicked = true;
+    }
+    static storageClicked()
+    {
+    	this.objRet(2)
     }
 }
