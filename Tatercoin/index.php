@@ -59,7 +59,7 @@
           </p>
         <p style="text-align: right; margin-top: 10px; margin-bottom: 10px; margin-right: 10px; padding-bottom: 5px;">
           <button id="Login" onclick="document.location='Login.php'">Login</button>
-          <button onclick="save("+<?php echo $_SESSION['username'].", ".$_SESSION['password'].", "+ObjectManager.getSave() ?>+")">Save File</button>
+          <!--<button onclick="save("+<?php //echo $_SESSION['username'].", ".$_SESSION['password'].", "+ObjectManager.getSave() ?>+")">Save File</button>-->
         </p>
       </div>
       <!-- Lower Menu (changes with building)-->
