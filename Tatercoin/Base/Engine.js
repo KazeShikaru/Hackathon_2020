@@ -26,13 +26,13 @@ class Engine
 //Every Game Loop: Call objectManager execute, Call GUI update
 function gameloop(engine)
 {
-    ObjectManager.execute();
 
-    this.tick++;
+    ObjectManager.execute();
+    engine.tick++;
     if(tick%10)
     {
-        this.gui.clear();
-        this.gui.draw();
+        engine.gui.clear();
+        engine.gui.draw();
     }
 }
 

@@ -2,17 +2,18 @@ class ObjectManager
 {		
 	static build()//constructor for new game
 	{
-		console.log(12222);
 		this.arr = ["Road Placeholder", new Farm(), new Storage(), new Processing(), "market Placeholder"];//create new object for each building
-		this.gameVariables = new gameVars;//initiates game variables
-		for(var i=0;i<32;i++)
+		this.gameVariables = new gameVars();//initiates game variables
+		this.grid = new Array(16);
+
+		for(var i=0;i<16;i++)
         {
-            this.grid[i] = new Array(18);
-            for(var j=0;j<18;j++)
+            this.grid[i] = new Array(9);
+            for(var j=0;j<9;j++)
             {
                 this.grid[i][j] = new Cell();
             }
-        }
+		}
 	}
 	/*static build(playerString)
 	{
@@ -38,11 +39,10 @@ class ObjectManager
 
 	static execute()
 	{
-		console.log("1");
 		for(element in this.array)//iterate through elements given per game tick
 		{
 			console.log(element);
-			var ret = this.execute(element);
+			var ret = this.run(element);
 			if(ret != 0)
 			{
 				if(ret == -1)
@@ -62,7 +62,8 @@ class ObjectManager
 		return this.arr[value];// return object
 	}
 
-	static execute(element)
+	//rename this function
+	static run(element)
 	{
 		if(element == undefined)
 		{
