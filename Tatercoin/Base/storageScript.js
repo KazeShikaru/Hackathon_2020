@@ -6,7 +6,7 @@ function StorageS(element){
 		element.add = 0;
 	}
 
-	if(element.clicked == true)
+	if(element.clicked || autoSell)
 	{
 		element.exportMarket = element.potatoes;
 		element.clicked = false;
