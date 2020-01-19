@@ -1,6 +1,6 @@
-module.exports = 
+class storage
 {
-	run: storage(element)
+	storageS(element)
 	{
 		if(add > 0)//checks if any potatoes to add
 		{
