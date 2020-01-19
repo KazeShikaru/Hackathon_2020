@@ -19,7 +19,7 @@ class GUI
         || document.documentElement.clientWidth
         || document.body.clientWidth;
         this.height = this.width/this.proportion;
-        this.cell_size = this.width/32;
+        this.cell_size = this.width/20;
 
         //resize canvas
         this.context.canvas.width = this.width;
@@ -37,29 +37,12 @@ class GUI
         console.log(this.canvas);
         console.log(this.context);
 
+        window.onresize = this.set_size();
+
         console.log("init canvas size");
         this.set_size();
         //this.context.fillStyle = 'black';
         //this.context.fillRect(10, 10, 150, 100)
-
-    }
-
-    clear()
-    {
-        this.context.clearRect(0,0,this.width,this.height);
-    }
-
-    draw_grid()
-    {
-        for(var i=0;i<32;i++)
-        {
-            for(var j =0;j<18;j++)
-            {
-                this.context.drawImage(get_cell_info(i,j),
-                    i*this.cell_size,j*this.cell_size,
-                    this.cell_size,this.cell_size);
-            }
-        }
 
     }
 
@@ -69,7 +52,34 @@ class GUI
     }
 
     get_cell_info( x, y)
-    {
-        return "/bin/test_cell.png";//new Image("/bin/test_cell.png");
+    { 
+        return document.getElementById("test");
     }
+
+    clear()
+    {
+        this.context.clearRect(0,0,this.width,this.height);
+    }
+
+    draw_grid()
+    {
+
+        console.log("draw");
+        for(var i=0;i<16;i++)
+        {
+            for(var j =0;j<9;j++)
+            {
+                
+                    console.log("drawing...")
+                    this.context.drawImage(this.get_cell_info(i,j),
+                        i*this.cell_size,j*this.cell_size,
+                        this.cell_size,this.cell_size);
+                    console.log(this.cell_size);
+                
+            }
+        }
+
+    }
+
+    
 }

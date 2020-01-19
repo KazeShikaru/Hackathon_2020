@@ -1,3 +1,6 @@
+
+
+
 class object_manager
 {
 	static transfer(targ, amount)//update store amounts for the objects so they can trade
@@ -33,11 +36,11 @@ class object_manager
 class object_executor
 {
 
-	constructor(arr)
+	static constructor()
 	{
-		this.array = arr;
+		this.arr = ["Road Placeholder", new farm, new storage, new processing, "market Placeholder"]
 	}
-	execute()
+	static execute()
 	{
 		for(element in this.array)//iterate through elements given per game tick
 		{
@@ -54,5 +57,9 @@ class object_executor
 				}
 			}
 		}
+	}
+	static objRet(value)
+	{
+		return this.arr[value];
 	}
 }

@@ -59,31 +59,24 @@ class Engine
 
     draw()
     {
-        
-    }
-
-    run()
-    {
-        //console.log("run engine");
-        //input
-        //this.input();
-
-        //logic
-        //this.update();
-                
-        //draw on canvas
         this.gui.clear();
         this.gui.draw_grid();
+    } 
+}
 
-    }
+function run(game)
+{
+    console.log('run');
 
     
+
+    game.draw();
 }
 
 
 $(document).ready(function()
 {
-    static var game = new Engine();
+    var game = new Engine();
 
     console.log("instantiate engine");
     game.load();
@@ -92,7 +85,6 @@ $(document).ready(function()
     game.init();
 
     console.log("init engine");
-    setInterval(game.run, 16);
-
+    setInterval(function() { run(game); }, 16);
     
 });
