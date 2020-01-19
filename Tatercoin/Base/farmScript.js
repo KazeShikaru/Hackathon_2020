@@ -14,14 +14,19 @@ function farmS(){
 
 		}
 	}
-	else {//Not planted
-		//console.log('not planted');
-	}
+	console.log(element.clicked);
 
 	if(element.clicked)
 	{
-		element.plant(10);
-		element.harvest();
+		console.log("farm clicked, " + element.growProgress + " " + element.harvestable);
+		if(element.harvestable)
+		{
+			harvest();
+		}
+		else if(!element.planted)
+		{
+			plant(10);
+		}
 		element.clicked = false;
 	}
 

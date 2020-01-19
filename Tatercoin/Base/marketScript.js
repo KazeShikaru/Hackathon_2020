@@ -4,5 +4,7 @@ function marketS()
 	if(element.add > 0)
 	{
 		ObjectManager.addCoins(element.add);
+		element.add = 0;
+		console.log(ObjectManager.getCoins());
 	}
 }

@@ -115,10 +115,10 @@ class ObjectManager
 		//console.log(x + " " + y );
         switch(this.yard.getBuilding(x,y)[0])
         {
-        	case "1":
-        		this.farmClicket();
+        	case 1:
+        		this.farmClicked();
         		return;
-        	case "2":
+        	case 2:
         		this.storageClicked();
         		return;
         	default:
@@ -129,9 +129,11 @@ class ObjectManager
     static farmClicked()
     {
     	this.objRet(1).clicked = true;
+    	console.log("farm clicked");
     }
     static storageClicked()
     {
     	this.objRet(2)
+    	console.log("storage clicked");
     }
 }
