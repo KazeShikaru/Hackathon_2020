@@ -18,14 +18,14 @@ function farmS(){
 
 	if(element.clicked)
 	{
-		console.log("farm clicked, " + element.growProgress + " " + element.harvestable);
-		if(element.harvestable)
-		{
-			harvest();
-		}
-		else if(!element.planted)
+		console.log(element.growProgress);
+		if(!element.planted)
 		{
 			plant(10);
+		}
+		else if(element.growProgress > 600)
+		{
+			harvest();
 		}
 		element.clicked = false;
 	}
@@ -41,9 +41,11 @@ function plant(seedsToPlant){
 		if(seedsToPlant <= seeds){//Make sure player has enough seeds
 			//console.log('Planting ' + seedsToPlant + ' seeds');
 			ObjectManager.setPlanted(true);
+			console.log(element.planted);
 			ObjectManager.setPlantedSeeds(seedsToPlant);
 			ObjectManager.setSeeds(seeds - seedsToPlant);
 			seeds = ObjectManager.getSeeds();
+			element.growProgress = 0;
 			//console.log('User now has '+seeds+' seeds');
 		}
 		else{
