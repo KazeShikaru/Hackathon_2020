@@ -19,7 +19,7 @@ class Engine
 
         console.log("init gui");
 
-        eventHandler.init(this.gui);
+        this.eventHandler.init(this.gui);
     }
 }
 
