@@ -182,7 +182,7 @@ class ObjectManager
     	console.log("storage clicked");
     }
     
-    static saveGame(){
+    static getSave(){
     	
     }
 }
