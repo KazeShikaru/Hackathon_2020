@@ -53,7 +53,7 @@ function harvest(){
 	var element = ObjectManager.arr[1];
 	if(element.planted && element.growProgress == 600){//Make sure farm is planted
 		//TODO Get upgrade modifiers here when they're implemented
-		var harvestYield = element.plantedSeeds * Math.random() * harvMod;
+		var harvestYield = element.plantedSeeds * Math.random() * element.harvMod;
 		ObjectManager.transfer(2, harvestYield);
 		ObjectManager.setPlanted(false);
 		ObjectManager.setPlantedSeeds(0);

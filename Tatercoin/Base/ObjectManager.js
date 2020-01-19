@@ -153,7 +153,7 @@ class ObjectManager
 		//console.log(x + " " + y );
         switch(this.yard.getBuilding(x,y)[0])
         {
-        	case: 0
+        	case 0:
         		//call ricks thing for ui
         		currentMenu(3);
         		this.landPos = [x,y];
