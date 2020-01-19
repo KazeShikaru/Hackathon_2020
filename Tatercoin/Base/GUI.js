@@ -2,81 +2,61 @@ class GUI
 {
     constructor()
     {
-        this.width = 800;
-        this.height = 600;
-        this.proportion = 1.77777778;
-        this.cell_size;
-        this.canvas;
-        this.context;
-    }
-
-    //set the canvas size
-    //the canvas needs to be initialized first
-    set_size()
-    {
-        console.log('set size');
-        this.width = window.innerWidth;
-        //|| document.documentElement.clientWidth
-        //|| document.body.clientWidth;
-        this.height = this.width/this.proportion;
-        this.cell_size = this.width/20;
-
-        //resize canvas
-        this.context.canvas.width = this.width;
-        this.context.canvas.height = this.height;
+    	
+        this.canvas = document.getElementById("canvas");
+        this.canvas.width = 971;
+        this.canvas.height = 600;
+        this.ctx = this.canvas.getContext("2d");
         
-        //call something that resizes objects
-        console.log('set size done  ');
+        this.ctx.moveTo(0, 0);
+        this.ctx.lineTo(200, 100);
+        this.ctx.stroke();
+        console.log("hello");
+        
+        this.drawAnImage(64,64,"bin/test_cell.png",
+                64,64);
+        console.log(this.cell_size);
+      
+        
+               
     }
 
-    init()
-    {
+    drawAnImage(width, height, color, x, y ) {
 
-        this.canvas =   document.getElementById('canvas');
-        this.context = canvas.getContext('2d');
-        console.log(this.canvas);
-        console.log(this.context);
 
-        window.onresize = this.set_size();
+        this.image = new Image();
+        this.image.src = color;
 
-        console.log("init canvas size");
-        this.set_size();
-        //this.context.fillStyle = 'black';
-        //this.context.fillRect(10, 10, 150, 100)
+        this.width = width;
+        this.height = height;
+        this.ctx.drawImage(this.image,x,y,
+                    width, height);
 
-    }
-
-    draw_objects()
-    {
-
-    }
-
-    get_cell_info( x, y)
-    { 
-        //void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
         
 
-        return document.getElementById("test");
     }
 
-    clear()
-    {
-        this.context.clearRect(0,0,this.width,this.height);
+ 
+    clear(){
+    	this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
+
+
+
 
     //gonna remove this later
     draw_grid()
     {
 
-        console.log("111111");
+        
         for(var i=0;i<16;i++)
         {
             for(var j =0;j<9;j++)
             {
-                    this.context.drawImage(this.get_cell_info(i,j),
-                        i*this.cell_size,j*this.cell_size,
-                        this.cell_size,this.cell_size);
-                    console.log(this.cell_size);
+            		this.drawAnImage(64,
+                        64,"bin/test_cell.png",
+                        i*64,j*64);
+                    
                 
             }
         }

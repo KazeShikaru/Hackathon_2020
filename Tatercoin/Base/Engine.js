@@ -12,13 +12,12 @@ class Engine
     //Initiates Engine
     start()
     {
-    	setInterval(function() { gameloop(this); }, 32);
+    	setInterval(function(eng) { this.gameloop(eng); }, 32,this);
 
         ObjectManager.build();
 
         console.log("init gui");
-        
-        this.gui.init();
+
 
     }
 }
@@ -26,14 +25,18 @@ class Engine
 //Every Game Loop: Call objectManager execute, Call GUI update
 function gameloop(engine)
 {
-    ObjectManager.execute();
+	
 
-    this.tick++;
-    if(this.tick%10==0)
+    engine.tick++;
+    
+    if(engine.tick%10==0)
     {
-        this.gui.clear();
-        this.gui.draw();
+    	console.log("text")
+    	engine.gui.draw();
+    	
     }
+    
+    ObjectManager.execute();
 
 }
 
