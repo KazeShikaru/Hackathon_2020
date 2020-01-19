@@ -11,6 +11,14 @@ class object_executor
 		//implement game loading
 	}
 
+	static getSeeds()
+	{
+		return this.gameVariables.seeds;
+	}
+	static getCoins()
+	{
+		return this.gameVariables.tatercoins;
+	}
 	static execute()
 	{
 		for(element in this.array)//iterate through elements given per game tick
