@@ -1,4 +1,4 @@
-module.exports = {
+var exp = {
 	run: farm(element){
 		if(element.growAmount < 10 && element.planted = true){ // If planted, grow
 			element.growAmount += element.growPerTick;
@@ -42,4 +42,6 @@ module.exports = {
 			console.log('Farm not planted');
 		}
 	}
-};
+}
+
+module.exports = exp;

@@ -21,11 +21,11 @@ class object_executor
 	}
 	static addSeeds(seeds)
 	{
-		return this.gameVariables.seeds += seeds;
+		return this.gameVariables.seeds += seeds;// increment seeds by given amount
 	}
 	static addCoins(coin)
 	{
-		return this.gameVariables.tatercoins += coin
+		return this.gameVariables.tatercoins += coin// increment coins by given amount
 	}
 
 	static execute()
