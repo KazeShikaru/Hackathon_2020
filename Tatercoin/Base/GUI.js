@@ -83,7 +83,7 @@ class GUI
     	for(var i =0; i<16;i++){
     		for (var j = 0; j<9;j++){
                 console.log(i + " " + j);
-
+                console.log(yard);
     			var o = yard[i][j][1];
 
     			switch(o){
