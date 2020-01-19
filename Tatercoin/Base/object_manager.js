@@ -1,9 +1,14 @@
 class object_executor
 {
 
-	static constructor()
+	static constructor()//constructor for new game
 	{
-		this.arr = ["Road Placeholder", new farm, new storage, new processing, "market Placeholder"]
+		this.arr = ["Road Placeholder", new farm, new storage, new processing, "market Placeholder"];//create new object for each building
+		this.gameVariables = new gameVars;//initiates game variables
+	}
+	static constructor(playerString)
+	{
+		//implement game loading
 	}
 
 	static execute()
