@@ -5,7 +5,8 @@ function StorageS(element){
 		element.potatoes += element.add;// adds potatoes and resets add count
 		element.add = 0;
 	}
-	if(element.clicked == true)
+
+	if(element.clicked || element.autoSell)
 	{
 		element.exportMarket = element.potatoes;
 		element.clicked = false;

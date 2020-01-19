@@ -7,6 +7,7 @@ class Farm extends Object {
     this.planted = false;
 	this.harvestable = false;
 	this.clicked = false;
+	this.harvMod = 1;
     //Upgrades
 
   }
