@@ -36,7 +36,10 @@ class Engine
         this.time.restart();
     }
 
-
+    gameloop(){
+    	
+    	
+    }
     update()
     {
         object_executor.execute();
