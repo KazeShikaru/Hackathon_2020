@@ -63,7 +63,12 @@
         </p>
       </div>
       <!-- Lower Menu (changes with building)-->
-      <div id='lowerMenu'>
+      <div id='farm' style='display:none'>
+        <p id=currentState></p>
+        <button id='farm-btn'>Plant</button>
+      </div>
+      <div id='storage' style='display:none'>
+        <p id='storage'>Nothing in storage</p>
       </div>
     </div>
 
