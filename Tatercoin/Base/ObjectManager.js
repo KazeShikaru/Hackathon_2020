@@ -181,4 +181,8 @@ class ObjectManager
     	this.objRet(2).clicked = true;
     	console.log("storage clicked");
     }
+    
+    static saveGame(){
+    	
+    }
 }
