@@ -19,7 +19,7 @@ class Engine
 
         console.log("init gui");
 
-
+        eventHandler.init(this.gui);
     }
 }
 
@@ -32,7 +32,7 @@ function gameloop(engine)
     
     if(engine.tick%10==0)
     {
-        engine
+        
         
     	engine.gui.draw();
     	

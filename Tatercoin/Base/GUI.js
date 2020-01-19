@@ -62,6 +62,11 @@ class GUI
 
     }
     
+    clickLocation(pos)
+    {
+        var x = pos%16;
+        var y = Math.floor(pos/16);
+    }
     
     //call to draw all things needed to draw
     draw()
