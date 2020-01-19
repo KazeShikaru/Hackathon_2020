@@ -70,7 +70,7 @@ class GUI
     	var imageSrc = "";
     	for(var i =0; i<16;i++){
     		for (var j = 0; j<9;j++){
-    			var o[][][] = yard[i][j][1];
+    			var o = yard[i][j][1];
     			
     			switch(o){
     			case 0:

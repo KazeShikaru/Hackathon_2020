@@ -6,7 +6,7 @@ class ObjectManager
 		this.gameVariables = new gameVars();//initiates game variables
 
 		this.yard = new Yard();
-
+		console.log(this.yard + " asdfasdfasdf");
 
 	}
 	/*static build(playerString)
