@@ -63,8 +63,7 @@
         </p>
       </div>
       <!-- Lower Menu (changes with building)-->
-      <div>
-        <p id='lowerMenu'></p>
+      <div id='lowerMenu'>
       </div>
     </div>
 
