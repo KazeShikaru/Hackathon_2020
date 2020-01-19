@@ -3,7 +3,8 @@ function StorageS(element){
 	if(element.add > 0)//checks if any potatoes to add
 	{
 		element.potatoes += element.add;// adds potatoes and resets add count
-		add = 0;
+		element.add = 0;
+		console.log(element.potatoes);
 	}
 	/*exportProcess is amount of potatoes to export to the processor
 	export Market is amount of potatoes to export to the processor,
@@ -25,7 +26,7 @@ function StorageS(element){
 	{
 		if(element.exportMarket <= element.potatoes)//if enough potatoes to export
 		{
-			element.potatoes -= element.exportProcess;// substract exported
+			element.potatoes -= element.exportMarket;// substract exported
 			ObjectManager.transfer(4, element.exportMarket);//call transfer to finish transfer with 4 for market
 		}
 		else
