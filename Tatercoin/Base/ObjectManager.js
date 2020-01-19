@@ -67,28 +67,40 @@ class ObjectManager
 	{
 		if(element == undefined)
 		{
+			console.log(element);
 			return 0;
 		}
-		switch(element.id)//execute per tick on passed element
+		switch(element)//execute per tick on passed element
 		{
-			case 1:
-			console.log('case 1');
+			case "1":
 			//Run farm script if farm
-				return this.arr[1].farmS(element);
+<<<<<<< HEAD
+				return farmS();
 
-			case 2:
+			case "2":
 			//Run Storage script if Storage
-				return Storage.StorageS(element);
+				return StorageS();
 
-			case 3:
+			case "3":
 			//Run Processing script if Storage
-				return Processing.ProcessingS(element);
+				return ProcessingS();
+=======
+				return farmS(element);
 
-			case 4:
+			case "2":
+			//Run Storage script if Storage
+				return StorageS(element);
+
+			case "3":
+			//Run Processing script if Storage
+				return ProcessingS(element);
+>>>>>>> 1d12e61f88540ce0982cc446df497e13a9b0f8ef
+
+			case "4":
 			//Run market script if Market
-				return market.marketS(element);
+				return market.marketS();
 
-			case 5:
+			case "5":
 			//trukk
 				return trukk.trukkS(element)
 		}

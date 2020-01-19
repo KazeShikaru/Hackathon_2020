@@ -11,6 +11,7 @@ class Storage extends Object {
     this.hasSeasonedSlicedPotatoes = false;
     this.potatoChips = 0;
     this.hasPotatoChips = false;
+    this.add = 0;
 
     //Upgrades
     this.level1Upgrade = false;

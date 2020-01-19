@@ -1,4 +1,6 @@
-function farmS(element){
+function farmS(){
+	var element = ObjectManager.arr[1];
+	console.log(element.growProgress + ", " + element.planted);
 	if(element.growAmount < 10 && element.planted){ // If planted, grow
 		element.growAmount += element.growPerTick;
 		console.log('Grow amount: ' + element.growAmount);
