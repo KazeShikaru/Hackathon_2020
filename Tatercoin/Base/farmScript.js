@@ -11,7 +11,7 @@ function farmS(element){
 
 function plant(seedsToPlant){
 	var seeds = element.seeds;
-	var element = ObjectManager.objRet(1);
+	var element = objectManager.objRet(1);
 	if(!element.planted){//Make sure not planted already
 		if(seedsToPlant <= seeds){//Make sure player has enough seeds
 			console.log('Planting ' + seedsToPlant + ' seeds');

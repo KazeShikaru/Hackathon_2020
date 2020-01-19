@@ -45,9 +45,11 @@ class ObjectManager
 
 	static execute()
 	{
+		console.log("1");
 		for(element in this.array)//iterate through elements given per game tick
 		{
-			var ret = ObjectManager.execute(element);
+			console.log(element);
+			var ret = this.execute(element);
 			if(ret != 0)
 			{
 				if(ret == -1)
@@ -67,8 +69,12 @@ class ObjectManager
 		return this.arr[value];// return object
 	}
 
-	static execute( element)
+	static execute(element)
 	{
+		if(element == undefined)
+		{
+			return 0;
+		}
 		switch(element.id)//execute per tick on passed element
 		{
 			case 1:
