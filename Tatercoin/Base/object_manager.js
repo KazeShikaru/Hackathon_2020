@@ -58,15 +58,15 @@ class object_executor
 		{
 			case 1:
 			//Run farm script if farm
-				return farm.farmS(element);
+				return farm.farmScript(element);
 				
 			case 2:
 			//Run storage script if storage
-				return storage.storageS(element);
+				return storage.storageScript(element);
 
 			case 3:
 			//Run Processing script if storage
-				return processing.processingS(element);
+				return processing.processingScript(element);
 
 			case 4:
 			//Run market script if Market

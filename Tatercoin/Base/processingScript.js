@@ -1,4 +1,4 @@
-class processing
+class processingScript
 {
 	function processingS(element)
 	{

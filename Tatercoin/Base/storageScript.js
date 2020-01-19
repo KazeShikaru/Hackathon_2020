@@ -1,6 +1,6 @@
-class storage
+class storageScript
 {
-	storageS(element)
+	function storageS(element)
 	{
 		if(add > 0)//checks if any potatoes to add
 		{
