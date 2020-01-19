@@ -1,5 +1,5 @@
-var exp = {
-	run: farm(element){
+class farm{
+	function farmS(element){
 		if(element.growAmount < 10 && element.planted = true){ // If planted, grow
 			element.growAmount += element.growPerTick;
 		}
@@ -43,5 +43,3 @@ var exp = {
 		}
 	}
 }
-
-module.exports = exp;
