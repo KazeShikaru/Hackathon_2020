@@ -1,7 +1,7 @@
 class ObjectManager
 {		
 	
-    function ObjectManager(){
+    constructor(){
     	this.gameVar = new gameVars();
     	this.seeds = 0;
     	this.grid = new Array(32);
