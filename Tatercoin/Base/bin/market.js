@@ -1,4 +1,4 @@
-class market extends Object
+class Market extends Object
 {
 	constructor()
 	{

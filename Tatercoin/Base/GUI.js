@@ -30,8 +30,7 @@ class GUI
         this.height = height;
         this.ctx.drawImage(this.image,x,y,
                     width, height);
-
-        
+ 
 
     }
 
@@ -40,9 +39,12 @@ class GUI
     	this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
 
-
-
-
+    
+    returnSquareSize(){
+    	
+    	return (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
+    }
+    
     //Prints grid
     draw_grid()
     {
@@ -62,6 +64,8 @@ class GUI
         }
 
     }
+    
+    
     
     draw()
     {
