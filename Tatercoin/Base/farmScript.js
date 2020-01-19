@@ -18,8 +18,8 @@ function plant(seedsToPlant){
 	if(!element.planted){//Make sure not planted already
 		if(seedsToPlant <= seeds){//Make sure player has enough seeds
 			console.log('Planting ' + seedsToPlant + ' seeds');
-			element.planted = true;
-			element.plantedSeeds = seedsToPlant;
+			ObjectManager.setPlanted(true);
+			ObjectManager.setPlantedSeeds(seedsToPlant);
 			ObjectManager.setSeeds(seeds - seedsToPlant);
 			seeds = ObjectManager.getSeeds();
 			console.log('User now has '+seeds+' seeds');
