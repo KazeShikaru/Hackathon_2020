@@ -15,9 +15,9 @@ class GUI
     set_size()
     {
         console.log('set size');
-        this.width = window.innerWidth
-        || document.documentElement.clientWidth
-        || document.body.clientWidth;
+        this.width = window.innerWidth;
+        //|| document.documentElement.clientWidth
+        //|| document.body.clientWidth;
         this.height = this.width/this.proportion;
         this.cell_size = this.width/20;
 
@@ -64,10 +64,11 @@ class GUI
         this.context.clearRect(0,0,this.width,this.height);
     }
 
+    //gonna remove this later
     draw_grid()
     {
 
-        console.log("draw");
+        console.log("111111");
         for(var i=0;i<16;i++)
         {
             for(var j =0;j<9;j++)
@@ -82,8 +83,10 @@ class GUI
 
     }
     
-    draw(){
-    	draw_grid();
+    draw()
+    {
+        console.log("111111");
+    	this.draw_grid();
     }
 
     
