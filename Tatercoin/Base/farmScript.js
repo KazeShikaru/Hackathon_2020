@@ -18,11 +18,11 @@ function farmS(){
 		//console.log('not planted');
 	}
 
-	if(clicked)
+	if(element.clicked)
 	{
 		element.plant(10);
 		element.harvest();
-		clicked = false;
+		element.clicked = false;
 	}
 
 	return null;
