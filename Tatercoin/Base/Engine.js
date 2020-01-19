@@ -7,6 +7,7 @@ class Engine
     	this.tick = 0;
         this.time = new Timer();
         this.gui = new GUI();
+        this.eventHandler =  new EventHandler();
     }
 
     //Initiates Engine
@@ -25,18 +26,18 @@ class Engine
 //Every Game Loop: Call objectManager execute, Call GUI update
 function gameloop(engine)
 {
-	
+    ObjectManager.execute();
 
     engine.tick++;
     
     if(engine.tick%10==0)
     {
-    	console.log("text")
+        engine
+        
     	engine.gui.draw();
     	
     }
-    
-    ObjectManager.execute();
+   
 
 }
 
