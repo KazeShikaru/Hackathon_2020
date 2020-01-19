@@ -41,7 +41,7 @@ class ObjectManager
 	{
 		for(var element in this.arr)//iterate through elements given per game tick
 		{
-			console.log(element);
+			//console.log(element);
 			var ret = this.run(element);
 			if(ret != 0)
 			{
@@ -72,8 +72,9 @@ class ObjectManager
 		switch(element.id)//execute per tick on passed element
 		{
 			case 1:
+			console.log('case 1');
 			//Run farm script if farm
-				return farm.farmS(element);
+				return this.arr[1].farmS(element);
 
 			case 2:
 			//Run Storage script if Storage
