@@ -64,10 +64,12 @@
       </div>
       <!-- Lower Menu (changes with building)-->
       <div id='farm' style='display:none'>
+        <H2>Farm</H2>
         <p id=currentState></p>
         <button id='farm-btn'>Plant</button>
       </div>
       <div id='storage' style='display:none'>
+        <H2>Storage</H2>
         <p id='storage'>Nothing in storage</p>
       </div>
     </div>
