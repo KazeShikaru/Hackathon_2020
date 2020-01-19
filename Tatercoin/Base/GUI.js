@@ -39,9 +39,14 @@ class GUI
     }
 
     //get the current size of each tile
-    returnSquareSize(){
+    returnSquareSize()
+    {
+        if(this.wid == undefined) return -1;
+        else
+        {
+            return (this.wid/16 > this.canvas.height/9)?this.canvas.height/9:this.wid/16;
+        }
     	
-    	return (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
     }
     
     // Prints grid
