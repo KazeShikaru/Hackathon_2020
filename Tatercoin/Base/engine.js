@@ -13,7 +13,6 @@ class Engine
     constructor()
     {
         this.time_constant = 0.0166667;
-        this.time = new Timer();
         this.grid = new Array(32);
         this.gui = new GUI();
     }
@@ -84,7 +83,7 @@ class Engine
 
 $(document).ready(function()
 {
-    var game = new Engine();
+    static var game = new Engine();
 
     console.log("instantiate engine");
     game.load();

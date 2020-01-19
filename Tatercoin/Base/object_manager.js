@@ -1,11 +1,11 @@
-class object_manager()
+class object_manager
 {
-	static transfer(object origin, object targ, int amount)//update store amounts for the objects so they can trade
+	static transfer( origin,  targ, amount)//update store amounts for the objects so they can trade
 	{
 		origin.storeRemove(amount);
 		targ.storeAdd(amount);
 	}
-	static execute(Object element)
+	static execute( element)
 	{
 		switch(element.id)//execute per tick on passed element
 		{
@@ -31,13 +31,12 @@ class object_manager()
 		}
 	}
 }
-class object_executor()
+class object_executor
 {
-	var array;
 
-	constructor(Object[] arr)
+	constructor(arr)
 	{
-		array = arr;
+		this.array = arr;
 	}
 	execute()
 	{
