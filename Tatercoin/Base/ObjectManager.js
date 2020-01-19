@@ -4,16 +4,11 @@ class ObjectManager
 	{
 		this.arr = ["Road Placeholder", new Farm(), new Storage(), new Processing(), new Market()];//create new object for each building
 		this.gameVariables = new gameVars();//initiates game variables
-		this.grid = new Array(16);
+		
+		
+		this.yard = new Yard();
 
-		for(var i=0;i<16;i++)
-        {
-            this.grid[i] = new Array(9);
-            for(var j=0;j<9;j++)
-            {
-                this.grid[i][j] = new Cell();
-            }
-		}
+		
 	}
 	/*static build(playerString)
 	{
