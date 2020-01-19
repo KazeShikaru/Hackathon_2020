@@ -13,8 +13,7 @@ setInterval(function()
 {
     $('#seeds').html(ObjectManager.getSeeds() + " Seeds");
     $('#money').html(ObjectManager.getCoins() + " ₽");
-},
-33
+}, 50
 );
 
 
