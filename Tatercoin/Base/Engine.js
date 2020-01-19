@@ -10,14 +10,16 @@
 */
 class Engine
 {
+	//Basic Constructor for Engine
     constructor()
     {
+    	this.tick =0;
         this.time = new Timer();
         this.grid = new Array(32);
         
     }
     
-
+    //Initiates Engine
     start()
     {
     	setInterval(function() { engine.gameloop(); }, 32);
@@ -33,13 +35,16 @@ class Engine
         console.log("init gui");
         this.gui.init();
 
-        this.time.restart();
     }
 
+    //Every Game Loop: Call objectManager execute, Call GUI update
     gameloop(){
-    	ObjectManager.execute();
-        this.gui.clear();
-        this.gui.draw_grid();
+    	ObjectManager.execute();        
+        this.tick++;
+        if(tick%10){
+        	this.gui.clear();
+            this.gui.draw_grid();
+        }
     	
     }
 
@@ -47,19 +52,6 @@ class Engine
 
 }
 
-function run(game)
-{
-    console.log('run');
 
-    game.update();
-
-    if(game.time.get_time_millis() > 100)
-    {
-        game.draw();
-        console.log("drawing.........");
-        game.time.restart();
-    }
-    
-}
 
 
