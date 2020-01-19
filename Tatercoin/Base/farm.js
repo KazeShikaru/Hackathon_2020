@@ -5,8 +5,8 @@ class Farm extends Object {
     this.growPerTick = 1;
     this.plantedSeeds = 0;
     this.planted = false;
-    this.harvestable = false;
-
+	this.harvestable = false;
+	this.clicked = false;
     //Upgrades
 
   }

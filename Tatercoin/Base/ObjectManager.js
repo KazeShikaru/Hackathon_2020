@@ -72,7 +72,6 @@ class ObjectManager
 	{
 		if(element == undefined)
 		{
-			console.log(element);
 			return 0;
 		}
 		switch(element)//execute per tick on passed element
@@ -103,7 +102,6 @@ class ObjectManager
 	static transfer(targ, amount)//update store amounts for the objects so they can trade
 	{
 		this.arr[targ].add += Math.floor(amount);
-		console.log(this.arr[targ].potatoes);
 	}
 
 
@@ -112,5 +110,15 @@ class ObjectManager
     {
         let x = pos%16;
         let y = Math.floor(pos/16); 
+        this.yard.getBuilding(x,y);
+    }
+
+    static farmClicked()
+    {
+    	this.objRet(1).clicked = true;
+    }
+    static storageClicked()
+    {
+    	this.objRet(2)
     }
 }

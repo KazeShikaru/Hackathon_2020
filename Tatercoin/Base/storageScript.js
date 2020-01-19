@@ -6,6 +6,11 @@ function StorageS(element){
 		element.add = 0;
 		console.log(element.potatoes);
 	}
+	if(element.clicked = true)
+	{
+		element.exportMarket = element.potatoes;
+		clicked = false;
+	}
 	/*exportProcess is amount of potatoes to export to the processor
 	export Market is amount of potatoes to export to the processor,
 	both will be set by the index on click
@@ -16,6 +21,7 @@ function StorageS(element){
 		{
 			element.potatoes -= element.exportProcess;//reduce potatoes by export ammount
 			ObjectManager.transfer(3, element.exportProcess);//call transfer to finish transfer, giving it 3(processor) and export number
+			element.exportProcess = 0;
 		}
 		else
 		{
@@ -28,6 +34,7 @@ function StorageS(element){
 		{
 			element.potatoes -= element.exportMarket;// substract exported
 			ObjectManager.transfer(4, element.exportMarket);//call transfer to finish transfer with 4 for market
+			eleent.exportMarket = 0;
 		}
 		else
 		{
