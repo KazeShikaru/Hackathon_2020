@@ -17,13 +17,13 @@
     <script src="base/processing.js"></script>
   <!--  <script src="base/Cell.js"></script>-->
     <script src="base/ObjectManager.js"></script>
-    <script src="base/UI.js"></script>
     <script src="base/GUI.js"></script>
     <script src="base/Engine.js"></script>
     <script src="base/save.js"></script>
     <script src="base/storageScript.js"></script>
     <script src="base/farmScript.js"></script>
     <script src="base/processingScript.js"></script>
+    <script src="base/UI.js"></script>
 
 </head>
 
@@ -34,14 +34,6 @@
     <div style="visibility: hidden">
         <!--<img id="test" src="test_cell.png">-->
     </div>
-    <div style='width: 280px; height: 100%; right: 0px;top: 0px;position: absolute; background-color: rgb(139, 139, 139);' id='menu'>
-        <div style="background-color: rgb(197, 197, 197);margin-left: 5px; margin-right: 5px;">
-            <p id="money" style="text-align: right ;font-size: 32px; margin-bottom: 5px; margin-right: 5px; margin-top: 10px;"> 100 ₽</p>
-            <p id="seeds" style="text-align: right ;font-size: 32px; margin-top: 5px;margin-right: 5px; margin-bottom: 10px;"> 100 seeds</p>
-            <p style="text-align: right; margin-top: 10px; margin-bottom: 10px; margin-right: 10px; padding-bottom: 5px;"><button id="buySeeds">Buy 1 Seed</button><button id="buy10Seeds">Buy 10 Seeds</button></pstyle="text-align: right">
-			<p style="text-align: right; margin-top: 10px; margin-bottom: 10px; margin-right: 10px; padding-bottom: 5px;"><button id="Login"><a href = "Login.php">Login</a></button><button onclick="save("+<?php echo $_SESSION['username'].", ".$_SESSION['password'].", "+ObjectManager.getSave() ?>+")">Save File</button></pstyle="text-align: right">
-
-        </div>
 
     </div>
 
@@ -55,6 +47,15 @@
     });
 
     </script>
+
+    <div style='width: 280px; height: 100%; right: 0px;top: 0px;position: absolute; background-color: rgb(139, 139, 139);' id='menu'>
+        <div style="background-color: rgb(197, 197, 197);margin-left: 5px; margin-right: 5px;">
+            <p id="money" style="text-align: right ;font-size: 32px; margin-bottom: 5px; margin-right: 5px; margin-top: 10px;"> 100 ₽</p>
+            <p id="seeds" style="text-align: right ;font-size: 32px; margin-top: 5px;margin-right: 5px; margin-bottom: 10px;"> 100 seeds</p>
+            <p style="text-align: right; margin-top: 10px; margin-bottom: 10px; margin-right: 10px; padding-bottom: 5px;"><button id="buySeeds">Buy 1 Seed</button><button id="buy10Seeds">Buy 10 Seeds</button></pstyle="text-align: right">
+      <p style="text-align: right; margin-top: 10px; margin-bottom: 10px; margin-right: 10px; padding-bottom: 5px;"><button id="Login"><a href = "Login.php">Login</a></button><button onclick="save("+<?php echo $_SESSION['username'].", ".$_SESSION['password'].", "+ObjectManager.getSave() ?>+")">Save File</button></pstyle="text-align: right">
+
+      </div>
 
 
 </body>
