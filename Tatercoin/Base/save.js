@@ -12,7 +12,7 @@ function save(username, password, data) {
 
 	// Fire off the request to /form.php
 	request = $.ajax({
-		url : "RequestTest.php",
+		url : "ProcessData.php",
 		type : "post",
 		data : {
 			username : username,
