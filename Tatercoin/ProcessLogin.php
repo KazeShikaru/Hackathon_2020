@@ -1,3 +1,8 @@
+<html>
+<head>
+
+</head>
+<body>
 <?php
 $dbname = "u820020134_potato";
 $username = "u820020134_potato";
@@ -20,11 +25,11 @@ if ($result->num_rows > 0) {
     $_SESSION['data'] = $row['data'];
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
-    header("Location: index.php");
+    echo "<a href=\"Login.php\">Success, Start game!</a>";
     
 } else {
     $_SESSION['fail'] = true;
-    header("Location: Login.php");
+    echo "<a href=\"Login.php\">Failed!: Return to Login</a>";
 }
 
 function sanitize($input)
@@ -35,3 +40,5 @@ function sanitize($input)
 }
 
 ?>
+</body>
+</html>
