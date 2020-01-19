@@ -19,7 +19,7 @@ function plant(seedsToPlant){
 		if(seedsToPlant <= seeds){//Make sure player has enough seeds
 			console.log('Planting ' + seedsToPlant + ' seeds');
 			ObjectManager.setPlanted(true);
-			ObjectManager.setPlantedSeeds(eedsToPlant);
+			ObjectManager.setPlantedSeeds(seedsToPlant);
 			ObjectManager.setSeeds(seeds - seedsToPlant);
 			seeds = ObjectManager.getSeeds();
 			console.log('User now has '+seeds+' seeds');
