@@ -10,17 +10,16 @@ class Yard
             for(var j=0;j<9;j++)
             {
             	//[0]building type//[1]sprite stage//[2]growthstage//[3]Unique
-                this.grid[i][j] = new Array(4);
+                this.grid[i][j] = [0,0,0,0];
             }
 		}
 		
 	}
 	
 	//add a new building
-	addBuilding(x,y,type){
-		
-		
-		this.grid[x][y] = type;
+	addBuilding(x,y,a,b,c,d){
+				
+		this.grid[x][y] = [a,b,c,d];
 		
 	}
 	

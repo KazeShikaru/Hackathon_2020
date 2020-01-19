@@ -5,8 +5,7 @@ class ObjectManager
 		this.arr = ["Road Placeholder", new Farm(), new Storage(), new Processing(), new Market()];//create new object for each building
 		this.gameVariables = new gameVars();//initiates game variables
 
-
-		//this.yard = new Yard();
+		this.yard = new Yard();
 
 
 	}
@@ -15,6 +14,9 @@ class ObjectManager
 		//implement game loading
 	}*/
 
+	static getYard(){
+		return this.yard;//return yard
+	}
 	static getSeeds()
 	{
 		return this.gameVariables.seeds;//returns seed count from gamevariables

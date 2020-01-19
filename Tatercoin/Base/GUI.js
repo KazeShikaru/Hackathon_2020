@@ -62,12 +62,43 @@ class GUI
 
     }
     
+    draw_yard(){
+    	var wid =  this.canvas.width -320;
+    	var size = (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
+    	var yard = ObjectManager.getYard();
+    	console.log(yard);
+    	var imageSrc = "";
+    	for(var i =0; i<16;i++){
+    		for (var j = 0; j<9;j++){
+    			var o = yard[i][j][1];
+    			
+    			switch(o){
+    			case 0:
+    				imageSrc = "bin/Test1.PNG";
+    				break;
+    			
+    			
+    			
+    			}
+    			
+    			this.drawAnImage(size,
+        				size,imageSrc,
+                    i*size,j*size);
+    			
+    			   			
+    		}
+    	}
+    	
+    	
+    }
+    
     
     //call to draw all things needed to draw
     draw()
     {
         console.log("111111");
     	this.draw_grid();
+    	this.draw_yard();
     }
 
     
