@@ -102,7 +102,8 @@ class ObjectManager
 
 	static transfer(targ, amount)//update store amounts for the objects so they can trade
 	{
-		this.arr[targ].add= amount;
+		this.arr[targ].add += Math.floor(amount);
+		console.log(this.arr[targ].potatoes);
 	}
 
 }

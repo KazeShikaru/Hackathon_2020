@@ -51,7 +51,7 @@ function harvest(){
 		ObjectManager.setPlanted(false);
 		ObjectManager.setPlantedSeeds(0);
 		element.growProgress = 0;
-
+		harvestYield = 0;
 		console.log('Harvested with yield of '+harvestYield +' kg of raw potatoes');
 	}
 	else{
