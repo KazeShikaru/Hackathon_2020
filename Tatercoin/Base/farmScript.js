@@ -1,9 +1,10 @@
 function farmS(){
 	var element = ObjectManager.arr[1];
 	console.log(element.growProgress + ", " + element.planted);
-	if(element.growAmount < 10 && element.planted){ // If planted, grow
-		element.growAmount += element.growPerTick;
-		console.log('Grow amount: ' + element.growAmount);
+	if(element.growProgress < 10 && element.planted){ // If planted, grow
+		console.log('growing');
+		element.growProgress += element.growPerTick;
+		console.log('Grow amount: ' + element.growProgress);
 	}
 	else { // If fully grown, set harvestable
 		element.harvestable = true;
