@@ -14,7 +14,8 @@ class Engine
     	setInterval(function() { engine.gameloop(); }, 32);
 
         console.log("init gui");
-        this.gui.init();
+        
+        gui.init();
 
     }
 
