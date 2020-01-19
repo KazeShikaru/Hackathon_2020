@@ -42,9 +42,9 @@
 			<p style="text-align: right; margin-top: 10px; margin-bottom: 10px; margin-right: 10px; padding-bottom: 5px;"><button id="Login"><a href = "Login.php">Login</a></button><button onclick="save("+<?php echo $_SESSION['username'].", ".$_SESSION['password'].", ".$_SESSION['data'] ?>+")">Save File</button></pstyle="text-align: right">
 
         </div>
-        
+
     </div>
-    
+
     <script>
     var engine;
     $(document).ready(function()
@@ -52,8 +52,6 @@
 		//Constructs Engine
 		engine = new Engine();
     engine.start();
-    plant(9);
-    harvest();
     });
 
     </script>
