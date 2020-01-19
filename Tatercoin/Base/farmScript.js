@@ -1,15 +1,21 @@
 function farmS(){
 	var element = ObjectManager.arr[1];
 	console.log("Grow progress: " + element.growProgress + ", planted: " + element.planted);
-	if(element.growProgress < 10 && element.planted){ // If planted, grow
-		console.log('growing');
-		element.growProgress += element.growPerTick;
-		console.log('Grow amount: ' + element.growProgress);
+	if(element.planted){
+		if(element.growProgress < 10){
+			console.log('growing');
+			element.growProgress += element.growPerTick;
+			console.log('Grow amount: ' + element.growProgress);
+		}
+		else{// If fully grown, set harvestable
+			element.harvestable = true;
+			console.log('Now harvestable');
+			harvest();
+
+		}
 	}
-	else { // If fully grown, set harvestable
-		element.harvestable = true;
-		console.log('Now harvestable');
-		harvest();
+	else {//Not planted
+		console.log('not planted');
 	}
 	return null;
 	//Plant a harvest of potatoes
@@ -42,8 +48,10 @@ function harvest(){
 		//TODO Get upgrade modifiers here when they're implemented
 		var harvestYield = element.plantedSeeds * Math.random();
 		ObjectManager.transfer(2, harvestYield);
-		element.planted = false;
-		element.plantedSeeds = 0;
+		ObjectManager.setPlanted(false);
+		ObjectManager.setPlantedSeeds(0);
+		element.growProgress = 0;
+
 		console.log('Harvested with yield of '+harvestYield +' kg of raw potatoes');
 	}
 	else{
