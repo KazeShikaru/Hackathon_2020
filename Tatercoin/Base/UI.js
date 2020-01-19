@@ -42,11 +42,13 @@ $(document).ready(function()
           console.log('Setting lower menu to farm');
           document.getElementById('currentState').innerText = "Planted: " + ObjectManager.objRet(1).planted + ", Progress: " + ObjectManager.objRet(1).growProgress;
           farmEl.style.display = "block";
+          storeEl.style.display = "none";
           break;
 
         case 2: //Storage
         console.log('Setting lower menu to storage');
         storeEl.style.display = "block";
+        farmEl.style.display = "none";
         break;
 
       }
