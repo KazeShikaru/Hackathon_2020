@@ -10,14 +10,15 @@ function farmS(element){
 }
 
 function plant(seedsToPlant){
-	var element = ObjectManager.objRet(1);
-	var seeds = element.seeds;
+	var element = ObjectManager.arr[1];
+	var seeds = ObjectManager.getSeeds();
 	if(!element.planted){//Make sure not planted already
 		if(seedsToPlant <= seeds){//Make sure player has enough seeds
 			console.log('Planting ' + seedsToPlant + ' seeds');
 			element.planted = true;
 			element.plantedSeeds = seedsToPlant;
-			setSeeds(seeds - seedsToPlant);
+			ObjectManager.setSeeds(seeds - seedsToPlant);
+			seeds = ObjectManager.getSeeds();
 			console.log('User now has '+seeds+' seeds');
 		}
 		else{
@@ -30,6 +31,7 @@ function plant(seedsToPlant){
 }
 
 function harvest(){
+	var element = ObjectManager.arr[1];
 	if(element.planted && element.growAmount == 60){//Make sure farm is planted
 		//TODO Get upgrade modifiers here when they're implemented
 		var harvestYield = element.plantedSeeds * math.random() * upgradeMod;
