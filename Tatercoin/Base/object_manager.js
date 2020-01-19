@@ -70,11 +70,11 @@ class object_executor
 
 			case 4:
 			//Run market script if Market
-				return market.run(element);
+				return market.marketS(element);
 
 			case 5:
 			//trukk
-				return trukk.run(element)
+				return trukk.trukkS(element)
 		}
 	}
 
