@@ -1,6 +1,6 @@
 class Yard
 {
-	
+	//Basic constructor
 	constructor(){
 		
 		this.grid = new Array(16);
@@ -9,14 +9,28 @@ class Yard
             this.grid[i] = new Array(9);
             for(var j=0;j<9;j++)
             {
-                this.grid[i][j] = new Cell();
+            	//[0]building type//[1]sprite stage//[2]growthstage//[3]Unique
+                this.grid[i][j] = new Array(4);
             }
 		}
 		
 	}
-
-
-
+	
+	//add a new building
+	addBuilding(x,y,type){
+		
+		
+		this.grid[x][y] = type;
+		
+	}
+	
+	
+	getBuilding(x,y){
+		
+		
+		return this.grid[x][y];
+		
+	}
 
 
 
