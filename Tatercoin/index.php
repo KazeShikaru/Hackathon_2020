@@ -32,9 +32,9 @@
     <canvas id='canvas'></canvas>
 
     <div style="visibility: hidden">
-        <img id="test" src="test_cell.png">
+        <!--<img id="test" src="test_cell.png">-->
     </div>
-    <div style='width: 280px; height: 1000px; right: 0px;top: 0px;position: absolute; background-color: rgb(139, 139, 139);' id='menu'>
+    <div style='width: 280px; height: 100%; right: 0px;top: 0px;position: absolute; background-color: rgb(139, 139, 139);' id='menu'>
         <div style="background-color: rgb(197, 197, 197);margin-left: 5px; margin-right: 5px;">
             <p id="money" style="text-align: right ;font-size: 32px; margin-bottom: 5px; margin-right: 5px; margin-top: 10px;"> 100 ₽</p>
             <p id="seeds" style="text-align: right ;font-size: 32px; margin-top: 5px;margin-right: 5px; margin-bottom: 10px;"> 100 seeds</p>
