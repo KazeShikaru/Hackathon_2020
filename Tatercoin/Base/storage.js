@@ -15,6 +15,7 @@ class Storage extends Object {
     this.exportProcess = 0;
     this.exportMarket = 0;
     this.clicked = false;
+    this.autoSell = false;
 
     //Upgrades
     this.level1Upgrade = false;

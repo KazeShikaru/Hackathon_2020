@@ -42,6 +42,18 @@ class ObjectManager
 		this.arr[1].plantedSeeds = s;
 	}
 
+	static upgradeField()
+	{
+		this.gameVariables.tatercoins -= 50;
+		this.arr[1].harvMod +=.5;
+	}
+
+	static upgradeStorage()
+	{
+		this.gameVariables.tatercoins -=500;
+		this.arr[2].autoSell = true;
+	}
+
 	static execute()
 	{
 		for(var element in this.arr)//iterate through elements given per game tick
