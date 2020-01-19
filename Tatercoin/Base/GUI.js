@@ -7,11 +7,11 @@ class GUI
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
         this.ctx = this.canvas.getContext("2d");
-        
+
         this.wid;
         this.size;
     }
-    
+
     //call after on-resize to reset size of playing field
     resetScreenSize(){
     	 this.canvas.width = window.innerWidth;
@@ -44,14 +44,14 @@ class GUI
         {
             return (this.wid/16 > this.canvas.height/9)?this.canvas.height/9:this.wid/16;
         }
-    	
+
     }
-    
+
     //receives a click
     clickLocation(pos)
     {
         let x = pos%16;
-        let y = Math.floor(pos/16); 
+        let y = Math.floor(pos/16);
     }
 
     // Prints grid
@@ -59,7 +59,7 @@ class GUI
     {
     	this.wid =  this.canvas.width -320;
     	this.size = (this.wid/16 > this.canvas.height/9)?this.canvas.height/9:this.wid/16;
-    	
+
         for(var i=0;i<16;i++)
         {
             for(var j =0;j<9;j++)
@@ -71,13 +71,13 @@ class GUI
         }
 
     }
-    
+
     draw_yard(){
     	this.wid =  this.canvas.width -320;
     	this.size = (this.wid/16 > this.canvas.height/9)?this.canvas.height/9:this.wid/16;
     	var yard = ObjectManager.getYard().grid;
     	//console.log(yard);
-    	var imageSrc = ""; 
+    	var imageSrc = "";
     	for(var i =0; i<16;i++){
     		for (var j = 0; j<9;j++){
                 //console.log(i + " " + j);
@@ -108,7 +108,7 @@ class GUI
                     }
     				break;
     			case 2:
-    				imageSrc = "bin/storage.PNG";
+    				imageSrc = "bin/storage.png";
     				break;
     			case 3:
     				imageSrc = "bin/Test4.PNG";
@@ -116,23 +116,23 @@ class GUI
     			case 4:
     				imageSrc = "bin/Test5.PNG";
     				break;
-    			
-    			
-    			
+
+
+
     			}
-    			
+
     			this.drawAnImage(this.size,
         				this.size,imageSrc,
                     i*this.size,j*this.size);
-    			
-    			   			
+
+
     		}
     	}
-    	
-    	
+
+
     }
-    
-    
+
+
     //call to draw all things needed to draw
     draw()
     {
@@ -140,5 +140,5 @@ class GUI
     	this.draw_yard();
     }
 
-    
+
 }
