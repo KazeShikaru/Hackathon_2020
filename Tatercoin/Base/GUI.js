@@ -8,6 +8,8 @@ class GUI
         this.canvas.height = window.innerHeight;
         this.ctx = this.canvas.getContext("2d");
         
+        this.wid;
+        this.size;
 
         console.log(this.cell_size);
     }
@@ -45,8 +47,8 @@ class GUI
     // Prints grid
     draw_grid()
     {
-    	var wid =  this.canvas.width -320;
-    	var size = (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
+    	wid =  this.canvas.width -320;
+    	size = (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
     	
         for(var i=0;i<16;i++)
         {
@@ -63,8 +65,8 @@ class GUI
     }
     
     draw_yard(){
-    	var wid =  this.canvas.width -320;
-    	var size = (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
+    	wid =  this.canvas.width -320;
+    	size = (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
     	var yard = ObjectManager.getYard();
     	console.log(yard);
     	var imageSrc = "";
