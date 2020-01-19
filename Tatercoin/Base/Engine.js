@@ -42,7 +42,7 @@ class Engine
     }
     update()
     {
-        object_executor.execute();
+        ObjectManager.execute();
     }
 
     draw()
