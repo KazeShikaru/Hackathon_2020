@@ -1,5 +1,8 @@
 <html>
 <head>
+
+</head>
+<body>
 <?php
 $dbname = "u820020134_potato";
 $username = "u820020134_potato";
@@ -12,33 +15,38 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$username = sanitize($_GET["username"]);
-$password = sanitize($_GET["password"]);
+$username = $_GET["username"];
+$password = $_GET["password"];
+echo "ya";
+$sql = "SELECT username FROM Saves WHERE username = '".$username."';";
 
-$sql = "SELECT username FROM Saves WHERE username = " . $username . ";";
-$result = $conn->query($sql);
+//$stmt = $conn->prepare("SELECT username FROM Saves WHERE username = '?';");
+//$stmt->bind_param("s", $username);
+$result = $conn->query($sql);//$stmt->execute();
+
 if ($result->num_rows > 0) {
+
     echo "name Taken";
 } else {
-    $sql = "INSERT INTO Saves VALUES (" . $username . ", " . $password . ", '');";
+
+    $sql=("INSERT INTO Saves (username, password, data) VALUES ('".$username."','".$password."', '');");
+    
+    
+    
     if ($conn->query($sql) === TRUE) {
         echo "AccountCreated";
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        header("Location: index.php");
+        $_SESSION['data'] ="";
+        echo "<a href=\"Login.php\">Success, Start game!</a>";
     } else {
         $_SESSION['fail'] = true;
-        header("Location: SignUp.php");
+        echo "<a href=\"SignUp.php\">Failed!: Return to Registration</a>";
     }
+
 }
 
-function sanitize($input)
-{
-    $input = trim($input); // get rid of white space left and right
-    $input = mysql_real_escape_string($input); // escapes \x00, \n, \r, \, ', " and \x1a
-    return $input;
-}
 
 ?>
-</head>
+</body>
 </html>
