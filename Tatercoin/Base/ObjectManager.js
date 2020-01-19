@@ -6,7 +6,7 @@ class ObjectManager
 		this.gameVariables = new gameVars();//initiates game variables
 
 		this.yard = new Yard();
-		console.log(this.yard + " asdfasdfasdf");
+		//console.log(this.yard + " asdfasdfasdf");
 
 	}
 	/*static build(playerString)
@@ -72,7 +72,7 @@ class ObjectManager
 	{
 		if(element == undefined)
 		{
-			console.log(element);
+			//console.log(element);
 			return 0;
 		}
 		switch(element)//execute per tick on passed element
@@ -103,7 +103,7 @@ class ObjectManager
 	static transfer(targ, amount)//update store amounts for the objects so they can trade
 	{
 		this.arr[targ].add += Math.floor(amount);
-		console.log(this.arr[targ].potatoes);
+		//console.log(this.arr[targ].potatoes);
 	}
 
 

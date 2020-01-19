@@ -10,8 +10,6 @@ class GUI
         
         this.wid;
         this.size;
-
-        console.log(this.cell_size);
     }
     
     //call after on-resize to reset size of playing field
@@ -80,12 +78,14 @@ class GUI
     	this.wid =  this.canvas.width -320;
     	this.size = (this.wid/16 > this.canvas.height/9)?this.canvas.height/9:this.wid/16;
     	var yard = ObjectManager.getYard();
-    	console.log(yard);
+    	//console.log(yard);
     	var imageSrc = "";
     	for(var i =0; i<16;i++){
     		for (var j = 0; j<9;j++){
+                console.log(i + " " + j);
+
     			var o = yard[i][j][1];
-    			
+
     			switch(o){
     			case 0:
     				imageSrc = "bin/Test1.PNG";
@@ -122,7 +122,6 @@ class GUI
     //call to draw all things needed to draw
     draw()
     {
-        console.log("111111");
     	//this.draw_grid();
     	this.draw_yard();
     }
