@@ -30,7 +30,7 @@ function gameloop(engine)
 
     engine.tick++;
     
-    if(engine.tick%10==0)
+    if(engine.tick%60==0)
     {
         
         

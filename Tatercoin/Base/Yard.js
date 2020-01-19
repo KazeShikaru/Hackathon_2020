@@ -10,7 +10,7 @@ class Yard
             for(var j=0;j<9;j++)
             {
             	//[0]building type//[1]sprite stage//[2]growthstage//[3]Unique
-                this.grid[i][j] = [0,0,0,0];
+                this.grid[i][j] = [0,1,0,0];
             }
 		}
 		
