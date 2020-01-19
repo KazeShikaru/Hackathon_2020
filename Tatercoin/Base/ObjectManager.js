@@ -73,21 +73,20 @@ class ObjectManager
 		switch(element)//execute per tick on passed element
 		{
 			case "1":
-			console.log('case 1');
 			//Run farm script if farm
-				return this.arr[1].farmS(element);
+				return farmS();
 
 			case "2":
 			//Run Storage script if Storage
-				return Storage.StorageS(element);
+				return StorageS();
 
 			case "3":
 			//Run Processing script if Storage
-				return Processing.ProcessingS(element);
+				return ProcessingS();
 
 			case "4":
 			//Run market script if Market
-				return market.marketS(element);
+				return market.marketS();
 
 			case "5":
 			//trukk
