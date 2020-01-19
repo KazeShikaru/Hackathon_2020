@@ -11,7 +11,7 @@
     <script src="base/farm.js"></script>
     <script src="base/processing.js"></script>
     <script src="base/Cell.js"></script>
-    <script src="base/object_executor.js"></script>
+    <script src="base/object_manager.js"></script>
     <script src="base/GUI.js"></script>
     <script src="base/Engine.js"></script>
     <script src="base/save.js"></script>
@@ -33,18 +33,18 @@
     var objectManager;
     $(document).ready(function()
     		{
-    		    
+
 				engine = new Engine();
     		    console.log("Starting engine");
     		    engine.start();
-    		    
+
     		    objectManager = new ObjectManager();
 
     		    console.log("init engine");
     		    setInterval(function() { run(game); }, 32);
-    		    
+
     		});
-    
+
     </script>
 
 
