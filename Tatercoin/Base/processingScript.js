@@ -1,6 +1,6 @@
 function ProcessingS(element)
 {
-	var element = ObjectManager.arr[1];
+	var element = ObjectManager.arr[2];
 	if(element.add > 0)
 	{
 		element.potatoes += add;

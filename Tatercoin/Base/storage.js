@@ -12,6 +12,8 @@ class Storage extends Object {
     this.potatoChips = 0;
     this.hasPotatoChips = false;
     this.add = 0;
+    this.exportProcess = 0;
+    this.exportMarket = 0;
 
     //Upgrades
     this.level1Upgrade = false;

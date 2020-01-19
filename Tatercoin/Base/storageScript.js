@@ -1,31 +1,32 @@
 function StorageS(element){
-	if(add > 0)//checks if any potatoes to add
+	var element = ObjectManager.arr[2];
+	if(element.add > 0)//checks if any potatoes to add
 	{
-		element.potatoes += add;// adds potatoes and resets add count
+		element.potatoes += element.add;// adds potatoes and resets add count
 		add = 0;
 	}
 	/*exportProcess is amount of potatoes to export to the processor
 	export Market is amount of potatoes to export to the processor,
 	both will be set by the index on click
 	*/
-	if(exportProcess > 0)//if any potatoes to export to Processing
+	if(element.exportProcess > 0)//if any potatoes to export to Processing
 	{
-		if(potatoes >= exportProcess)//makes sure enough potatoes are stored to export
+		if(element.potatoes >= element.exportProcess)//makes sure enough potatoes are stored to export
 		{
-			element.potatoes -= exportProcess;//reduce potatoes by export ammount
-			manager.transfer(3, exportProcess);//call transfer to finish transfer, giving it 3(processor) and export number
+			element.potatoes -= element.exportProcess;//reduce potatoes by export ammount
+			ObjectManager.transfer(3, element.exportProcess);//call transfer to finish transfer, giving it 3(processor) and export number
 		}
 		else
 		{
 			return -1;//-1 error not enough potatoes
 		}
 	}
-	if(exportMarket > 0)//if any potatoes to export to market
+	if(element.exportMarket > 0)//if any potatoes to export to market
 	{
-		if(exportMarket <= potatoes)//if enough potatoes to export
+		if(element.exportMarket <= element.potatoes)//if enough potatoes to export
 		{
-			element.potatoes -= exportProcess;// substract exported
-			manager.transfer(4, exportMarket);//call transfer to finish transfer with 4 for market
+			element.potatoes -= element.exportProcess;// substract exported
+			ObjectManager.transfer(4, element.exportMarket);//call transfer to finish transfer with 4 for market
 		}
 		else
 		{
