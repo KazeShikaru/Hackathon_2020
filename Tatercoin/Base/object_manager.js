@@ -1,9 +1,8 @@
 class object_manager
 {
-	static transfer( origin,  targ, amount)//update store amounts for the objects so they can trade
+	static transfer(targ, amount)//update store amounts for the objects so they can trade
 	{
-		origin.storeRemove(amount);
-		targ.storeAdd(amount);
+		targ.add= amount;
 	}
 	static execute( element)
 	{
@@ -40,12 +39,19 @@ class object_executor
 	}
 	execute()
 	{
-		for(element in array)//iterate through elements given per game tick
+		for(element in this.array)//iterate through elements given per game tick
 		{
 			var ret = object_manager.execute(element);
-			if(ret != NULL)
+			if(ret != 0)
 			{
-
+				if(ret == -1)
+				{
+					//popup for not enough potatoes to transfer
+				}
+				else if(ret == -2)
+				{
+					//popup for incorrect infastructure to perform the action
+				}
 			}
 		}
 	}
