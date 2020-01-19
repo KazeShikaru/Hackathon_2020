@@ -19,6 +19,14 @@ class object_executor
 	{
 		return this.gameVariables.tatercoins;// returns coin count from game variables
 	}
+	static addSeeds(seeds)
+	{
+		return this.gameVariables.seeds += seeds;
+	}
+	static addCoins(coin)
+	{
+		return this.gameVariables.tatercoins += coin
+	}
 
 	static execute()
 	{
