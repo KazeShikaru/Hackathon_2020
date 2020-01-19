@@ -59,7 +59,7 @@ class ObjectManager
 
 	static objRet(value)//return object at index array
 	{
-		return this.arr[value];// return object
+		return this.array[value];// return object
 	}
 
 	//rename this function

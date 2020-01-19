@@ -10,8 +10,8 @@ function farmS(element){
 }
 
 function plant(seedsToPlant){
+	var element = ObjectManager.objRet(1);
 	var seeds = element.seeds;
-	var element = objectManager.objRet(1);
 	if(!element.planted){//Make sure not planted already
 		if(seedsToPlant <= seeds){//Make sure player has enough seeds
 			console.log('Planting ' + seedsToPlant + ' seeds');
@@ -30,13 +30,13 @@ function plant(seedsToPlant){
 }
 
 function harvest(){
-	if(element.planted){//Make sure farm is planted
+	if(element.planted && element.growAmount == 60){//Make sure farm is planted
 		//TODO Get upgrade modifiers here when they're implemented
-		var harvestYield = element.plantedSeeds * math.random();
-		store("potato", harvestYield);
+		var harvestYield = element.plantedSeeds * math.random() * upgradeMod;
+		ObjectManager.transfer(2, harvestYield);
 		element.planted = false;
 		element.plantedSeeds = 0;
-		console.log('Harvested with yield of '+harvestYield+' kg of raw potatoes');
+		console.log('Harvested with yield of '+harvestYield * upgradeMod+' kg of raw potatoes');
 	}
 	else{
 		console.log('Farm not planted');
