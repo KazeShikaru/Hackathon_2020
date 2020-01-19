@@ -2,28 +2,20 @@ function farmS(){
 	var element = ObjectManager.arr[1];
 	//console.log("Grow progress: " + element.growProgress + ", planted: " + element.planted);
 	if(element.planted){
-		if(element.growProgress < 10){
+		if(element.growProgress < 600){
 			//console.log('growing');
 			element.growProgress += element.growPerTick;
 			//console.log('Grow amount: ' + element.growProgress);
 		}
-		else{// If fully grown, set harvestable
-			element.harvestable = true;
-			//console.log('Now harvestable');
-			harvest();
-
-		}
 	}
-	console.log(element.clicked);
 
 	if(element.clicked)
 	{
-		console.log(element.growProgress);
 		if(!element.planted)
 		{
 			plant(10);
 		}
-		else if(element.growProgress > 600)
+		else if(element.growProgress == 600)
 		{
 			harvest();
 		}
@@ -41,11 +33,11 @@ function plant(seedsToPlant){
 		if(seedsToPlant <= seeds){//Make sure player has enough seeds
 			//console.log('Planting ' + seedsToPlant + ' seeds');
 			ObjectManager.setPlanted(true);
-			console.log(element.planted);
 			ObjectManager.setPlantedSeeds(seedsToPlant);
 			ObjectManager.setSeeds(seeds - seedsToPlant);
 			seeds = ObjectManager.getSeeds();
 			element.growProgress = 0;
+			
 			//console.log('User now has '+seeds+' seeds');
 		}
 		else{
@@ -59,8 +51,9 @@ function plant(seedsToPlant){
 
 function harvest(){
 	var element = ObjectManager.arr[1];
-	if(element.planted && element.growProgress == 10){//Make sure farm is planted
+	if(element.planted && element.growProgress == 600){//Make sure farm is planted
 		//TODO Get upgrade modifiers here when they're implemented
+		console.log("AAAAAAAAAAAAAAAAAAAAAAAAAA");
 		var harvestYield = element.plantedSeeds * Math.random();
 		ObjectManager.transfer(2, harvestYield);
 		ObjectManager.setPlanted(false);

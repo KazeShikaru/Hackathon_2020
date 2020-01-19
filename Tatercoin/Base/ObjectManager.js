@@ -133,7 +133,7 @@ class ObjectManager
     }
     static storageClicked()
     {
-    	this.objRet(2)
-    	//console.log("storage clicked");
+    	this.objRet(2).clicked = true;
+    	console.log("storage clicked");
     }
 }
