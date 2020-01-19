@@ -4,7 +4,7 @@ class ObjectManager
 	{
 		this.arr = ["Road Placeholder", new Farm(), new Storage(), new Processing(), new Market()];//create new object for each building
 		this.gameVariables = new gameVars();//initiates game variables
-
+		this.landPos = [0,0];
 		this.yard = new Yard();
 		//console.log(this.yard + " asdfasdfasdf");
 
@@ -36,9 +36,14 @@ class ObjectManager
 
 	static buySeeds(amount)
 	{
-		this.gameVariables.tatercoins -= amount;
-		this.gameVariables.seeds += amount *20;
+		if(amount < this.getCoins)
+		{
+			this.gameVariables.tatercoins -= amount;
+			this.gameVariables.seeds += amount *20;
+		}
 	}
+
+
 
 	//Fuck it
 	static setPlanted(p){
@@ -50,14 +55,20 @@ class ObjectManager
 
 	static upgradeField()
 	{
-		this.gameVariables.tatercoins -= 50;
-		this.arr[1].harvMod +=.5;
+		if(this.getCoins >=50)
+		{
+			this.gameVariables.tatercoins -= 50;
+			this.arr[1].harvMod +=.5;
+		}
 	}
 
 	static upgradeStorage()
 	{
-		this.gameVariables.tatercoins -=500;
-		this.arr[2].autoSell = true;
+		if(this.getCoins >=500)
+		{
+			this.gameVariables.tatercoins -=500;
+			this.arr[2].autoSell = true;
+		}
 	}
 
 	static execute()
@@ -125,6 +136,15 @@ class ObjectManager
 	}
 
 
+	static buyLand()
+	{
+		if(this.getCoins >= 1000)
+		{
+			this.yard.grid[this.landPos[0]][this.landPos[1]][0] = 1;
+			this.gameVariables.tatercoins -= 1000;
+		}
+	}
+
 	//receives a click
     static clickLocation(pos)
     {
@@ -133,6 +153,11 @@ class ObjectManager
 		//console.log(x + " " + y );
         switch(this.yard.getBuilding(x,y)[0])
         {
+        	case: 0
+        		//call ricks thing for ui
+        		currentMenu(3);
+        		this.landPos = [x,y];
+        		return;
         	case 1:
         		this.farmClicked();
         		return;
@@ -145,12 +170,14 @@ class ObjectManager
     }
 
     static farmClicked()
-    {
+    {	
+    	currentMenu(1);
     	this.objRet(1).clicked = true;
     	//console.log("farm clicked");
     }
     static storageClicked()
     {
+    	currentMenu(2);
     	this.objRet(2).clicked = true;
     	console.log("storage clicked");
     }
