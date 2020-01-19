@@ -29,7 +29,7 @@ function gameloop(engine)
     ObjectManager.execute();
 
     this.tick++;
-    if(tick%10==0)
+    if(this.tick%10==0)
     {
         this.gui.clear();
         this.gui.draw();
