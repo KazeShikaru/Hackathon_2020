@@ -28,6 +28,23 @@
     <div style="visibility: hidden">
         <img id="test" src="bin/test_cell.png">
     </div>
+    <script>
+    $(document).ready(function()
+    		{
+    		    var game = new Engine();
+
+    		    console.log("instantiate engine");
+    		    game.load();
+
+    		    console.log("load engine");
+    		    game.init();
+
+    		    console.log("init engine");
+    		    setInterval(function() { run(game); }, 16);
+    		    
+    		});
+    
+    </script>
 
 
 </body>

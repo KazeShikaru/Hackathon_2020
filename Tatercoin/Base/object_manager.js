@@ -13,12 +13,13 @@ class object_executor
 
 	static getSeeds()
 	{
-		return this.gameVariables.seeds;
+		return this.gameVariables.seeds;//returns seed count from gamevariables
 	}
 	static getCoins()
 	{
-		return this.gameVariables.tatercoins;
+		return this.gameVariables.tatercoins;// returns coin count from game variables
 	}
+
 	static execute()
 	{
 		for(element in this.array)//iterate through elements given per game tick
