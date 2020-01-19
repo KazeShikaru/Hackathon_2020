@@ -1,5 +1,6 @@
 class processing extends Object {
   constructor(){
-    var busy = false;
+    super();
+    this.busy = false;
   }
 }
