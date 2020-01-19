@@ -67,8 +67,6 @@ class GUI
             		this.drawAnImage(size,
             				size,"bin/test_cell.png",
                         i*size,j*size);
-                    
-                
             }
         }
 
@@ -91,7 +89,23 @@ class GUI
     				imageSrc = "bin/grass.PNG";
     				break;
     			case 1:
-    				imageSrc = "bin/farm_1.PNG";
+                    var prog = ObjectManager.objRet(1).growProgress;
+                    if(prog/600 < .25)
+                    {
+                        imageSrc = "bin/Stage1.png";
+                    }
+                    else if(prog/600 < .5)
+                    {
+                        imageSrc = "bin/Stage2.png";
+                    }
+                    else if(prog/600 < .75)
+                    {
+                        imageSrc = "bin/Stage3.png";
+                    }
+                    else
+                    {
+                        imageSrc = "bin/Stage4.png";
+                    }
     				break;
     			case 2:
     				imageSrc = "bin/Test3.PNG";
