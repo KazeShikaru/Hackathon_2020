@@ -39,6 +39,8 @@
             <p id="money" style="text-align: right ;font-size: 32px; margin-bottom: 5px; margin-right: 5px; margin-top: 10px;"> 100 ₽</p>
             <p id="seeds" style="text-align: right ;font-size: 32px; margin-top: 5px;margin-right: 5px; margin-bottom: 10px;"> 100 seeds</p>
             <p style="text-align: right; margin-top: 10px; margin-bottom: 10px; margin-right: 10px; padding-bottom: 5px;"><button id="buySeeds">Buy 1 Seed</button><button id="buy10Seeds">Buy 10 Seeds</button></pstyle="text-align: right">
+			<p style="text-align: right; margin-top: 10px; margin-bottom: 10px; margin-right: 10px; padding-bottom: 5px;"><button id="Login"><a href = "Login.php">Login</a></button><button onclick="save("+<?php echo $_SESSION['username'].", ".$_SESSION['password'].", ".$_SESSION['data'] ?>+")">Save File</button></pstyle="text-align: right">
+
         </div>
         
     </div>

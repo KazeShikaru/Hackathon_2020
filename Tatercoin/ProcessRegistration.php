@@ -38,7 +38,7 @@ if ($result->num_rows > 0) {
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $_SESSION['data'] ="";
-        echo "<a href=\"Login.php\">Success, Start game!</a>";
+        echo "<a href=\"index.php\">Success, Start game!</a>";
     } else {
         $_SESSION['fail'] = true;
         echo "<a href=\"SignUp.php\">Failed!: Return to Registration</a>";
