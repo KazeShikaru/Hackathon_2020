@@ -9,7 +9,13 @@ $('#buySeeds').click()
     ObjectManager.buySeeds(1)
 );
 
-$('#seeds').html
+setInterval(function()
+{
+    $('#seeds').html(ObjectManager.getSeeds() + " Seeds");
+    $('#money').html(ObjectManager.getCoins() + " ₽");
+}, 50
+);
+
 
 function currentMenu(pos)
 {
