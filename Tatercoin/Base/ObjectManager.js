@@ -39,7 +39,7 @@ class ObjectManager
 		if(amount <= this.getCoins())
 		{
 			this.gameVariables.tatercoins -= amount;
-			this.gameVariables.seeds += amount *20;
+			this.gameVariables.seeds += amount * 20;
 		}
 	}
 
@@ -142,6 +142,7 @@ class ObjectManager
 		{
 			this.yard.grid[this.landPos[0]][this.landPos[1]][0] = 1;
 			this.gameVariables.tatercoins -= 1000;
+			this.objRet(1).plantsPer += 5;
 		}
 	}
 
