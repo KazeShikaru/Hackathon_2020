@@ -75,15 +75,15 @@ class ObjectManager
 			case "1":
 			console.log('case 1');
 			//Run farm script if farm
-				return this.arr[1].farmS(element);
+				return farmS(element);
 
 			case "2":
 			//Run Storage script if Storage
-				return Storage.StorageS(element);
+				return StorageS(element);
 
 			case "3":
 			//Run Processing script if Storage
-				return Processing.ProcessingS(element);
+				return ProcessingS(element);
 
 			case "4":
 			//Run market script if Market

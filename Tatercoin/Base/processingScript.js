@@ -5,9 +5,4 @@ function ProcessingS(element)
 		element.potatoes += add;
 		add = 0;
 	}
-
-	if(peeling)
-	{
-		potatoes
-	}
 }
