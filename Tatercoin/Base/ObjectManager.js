@@ -39,7 +39,7 @@ class ObjectManager
 
 	static execute()
 	{
-		for(element in this.arr)//iterate through elements given per game tick
+		for(var element in this.arr)//iterate through elements given per game tick
 		{
 			console.log(element);
 			var ret = this.run(element);
