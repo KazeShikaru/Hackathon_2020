@@ -11,26 +11,19 @@
 class Engine
 {
 	//Basic Constructor for Engine
-    constructor()
+    function Engine()
     {
     	this.tick =0;
         this.time = new Timer();
-        this.grid = new Array(32);
+        
         
     }
     
     //Initiates Engine
-    start()
+    function start()
     {
     	setInterval(function() { engine.gameloop(); }, 32);
-    	for(var i=0;i<32;i++)
-        {
-            this.grid[i] = new Array(18);
-            for(var j=0;j<18;j++)
-            {
-                this.grid[i][j] = new Cell();
-            }
-        }
+    	
 
         console.log("init gui");
         this.gui.init();
@@ -38,12 +31,12 @@ class Engine
     }
 
     //Every Game Loop: Call objectManager execute, Call GUI update
-    gameloop(){
+    function gameloop(){
     	objectManager.execute();        
         this.tick++;
         if(tick%10){
         	this.gui.clear();
-            this.gui.draw_grid();
+            this.gui.draw();
         }
     	
     }

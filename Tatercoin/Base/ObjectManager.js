@@ -1,8 +1,10 @@
 class ObjectManager
 {		
 	
-    constructor(){
-    	
+    function ObjectManager(){
+    	this.gameVar = new gameVars();
+    	this.seeds = 0;
+    	this.grid = new Array(32);
     	
     }
 
@@ -10,6 +12,14 @@ class ObjectManager
 	{
 		this.arr = ["Road Placeholder", new farm, new storage, new processing, "market Placeholder"];//create new object for each building
 		this.gameVariables = new gameVars;//initiates game variables
+		for(var i=0;i<32;i++)
+        {
+            this.grid[i] = new Array(18);
+            for(var j=0;j<18;j++)
+            {
+                this.grid[i][j] = new Cell();
+            }
+        }
 	}
 	static build(playerString)
 	{
