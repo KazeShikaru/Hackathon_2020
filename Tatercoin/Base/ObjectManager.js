@@ -67,6 +67,7 @@ class ObjectManager
 	{
 		if(element == undefined)
 		{
+			console.log(element);
 			return 0;
 		}
 		switch(element.id)//execute per tick on passed element
