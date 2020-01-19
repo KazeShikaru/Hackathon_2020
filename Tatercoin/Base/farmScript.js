@@ -13,10 +13,12 @@ function farmS(){
 	{
 		if(!element.planted)
 		{
+			console.log('going to plant');
 			plant(10);
 		}
 		else if(element.growProgress == 600)
 		{
+			console.log('going to harvest');
 			harvest();
 		}
 		element.clicked = false;
