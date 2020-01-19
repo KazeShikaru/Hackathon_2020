@@ -5,11 +5,12 @@ class Yard
 		
 		this.grid = new Array(16);
 		for(var i=0;i<16;i++)
-        {
+        {//console.log(this.grid)
             this.grid[i] = new Array(9);
             for(var j=0;j<9;j++)
             {
-            	//[0]building type//[1]sprite stage//[2]growthstage//[3]Unique
+				//[0]building type//[1]sprite stage//[2]growthstage//[3]Unique
+				//console.log(this.grid)
                 this.grid[i][j] = new Array(4);
                 this.grid[i][j] = [0,1,0,0];
             }

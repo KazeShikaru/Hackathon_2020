@@ -77,13 +77,13 @@ class GUI
     draw_yard(){
     	this.wid =  this.canvas.width -320;
     	this.size = (this.wid/16 > this.canvas.height/9)?this.canvas.height/9:this.wid/16;
-    	var yard = ObjectManager.getYard();
+    	var yard = ObjectManager.getYard().grid;
     	//console.log(yard);
-    	var imageSrc = "";
+    	var imageSrc = ""; 
     	for(var i =0; i<16;i++){
     		for (var j = 0; j<9;j++){
-                console.log(i + " " + j);
-                console.log(yard);
+                //console.log(i + " " + j);
+                //console.log(yard[0]);
     			var o = yard[i][j][1];
 
     			switch(o){
@@ -107,9 +107,9 @@ class GUI
     			
     			}
     			
-    			this.drawAnImage(size,
-        				size,imageSrc,
-                    i*size,j*size);
+    			this.drawAnImage(this.size,
+        				this.size,imageSrc,
+                    i*this.size,j*this.size);
     			
     			   			
     		}
