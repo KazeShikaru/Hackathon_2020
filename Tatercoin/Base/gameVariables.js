@@ -1,6 +1,6 @@
 class gameVars{
   constructor(){
-    this.seeds = 10000000000000000000000000000000000000000000000;
+    this.seeds = 50;
     this.tatercoins = 0;
   }
 }
