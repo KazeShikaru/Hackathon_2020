@@ -29,9 +29,28 @@ if($requestType == "Login"){
     
     
 }else if($requestType == "Save"){
-    $sql = "UPDATE Saves SET data = \"".$data."\" WHERE username = ".$username.";";
+    $sql = "SELECT password FROM Saves WHERE password = ".$password." and username =".$username.";";
+    $result = executeQuerry($sql);
+    if (mysqli_num_rows($result) > 0) {
+        $sql = "UPDATE Saves SET data = \"".$data."\" WHERE username = ".$username.";";
+        executeQuerry($sql);
+        echo "saved";
+    }
     
-    echo "saved";
+    
+}else if($requestType == "Register"){
+    $sql = "SELECT username FROM Saves WHERE username = ".$username.";";
+    $result = executeQuerry($sql);
+    if (mysqli_num_rows($result) > 0) {
+        echo "name Taken";
+    }else{
+        $sql = "INSERT INTO Saves VALUES (".$username.", ".$password.", '');";
+        executeQuerry($sql);
+        echo "Registred";        
+    }
+    
+    
+
     
 }
 
