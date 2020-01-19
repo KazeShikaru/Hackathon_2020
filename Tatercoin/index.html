@@ -1,0 +1,47 @@
+<!doctype html>
+<meta charset="UTF-8">
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="base/EventHandler.js"></script>
+    <script src="base/marketScript.js"></script>
+    <script src="base/market.js"></script>
+    <script src="base/marketScript.js"></script>
+    <script src="base/Timer.js"></script>
+    <script src="base/gameVariables.js"></script>
+    <script src="base/Object.js"></script>
+    <script src="base/Storage.js"></script>
+    <script src="base/farm.js"></script>
+    <script src="base/Processing.js"></script>
+  <!--  <script src="base/Cell.js"></script>-->
+    <script src="base/ObjectManager.js"></script>
+    <script src="base/GUI.js"></script>
+    <script src="base/Engine.js"></script>
+    <script src="base/save.js"></script>
+    <script src="base/StorageScript.js"></script>
+    <script src="base/farmScript.js"></script>
+    <script src="base/ProcessingScript.js"></script>
+
+</head>
+
+<body>
+
+    <canvas id='canvas'></canvas>
+
+    <div style="visibility: hidden">
+        <img id="test" src="bin/test_cell.png">
+    </div>
+    <script>
+    var engine;
+    $(document).ready(function()
+    {
+		//Constructs Engine
+		engine = new Engine();
+    engine.start();
+    });
+
+    </script>
+
+
+</body>
