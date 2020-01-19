@@ -17,19 +17,11 @@ class Engine
         this.gui = new GUI();
     }
     
-    load()
+
+    start()
     {
-
-    }
-
-    save()
-    {
-
-    }
-
-    init()
-    {
-        for(var i=0;i<32;i++)
+    	setInterval(function() { engine.gameloop(); }, 32);
+    	for(var i=0;i<32;i++)
         {
             this.grid[i] = new Array(18);
             for(var j=0;j<18;j++)
@@ -44,10 +36,6 @@ class Engine
         this.time.restart();
     }
 
-    input()
-    {
-
-    }
 
     update()
     {
