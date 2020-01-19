@@ -1,10 +1,9 @@
-function save(data) {
+//Save function that takes in username password and data parameter and use Ajax to send files to server
 
+
+function save(username, password, data) {
+	//initiate request
 	var request;
-	var username = "hello ";
-	var password = "world ";
-	
-
 	// Abort any pending request
 	if (request) {
 		request.abort();

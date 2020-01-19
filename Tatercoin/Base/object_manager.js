@@ -1,12 +1,49 @@
-
-
-
-class object_manager
+class object_executor
 {
-	static transfer(targ, amount)//update store amounts for the objects so they can trade
+
+	static constructor()//constructor for new game
 	{
-		targ.add= amount;
+		this.arr = ["Road Placeholder", new farm, new storage, new processing, "market Placeholder"];//create new object for each building
+		this.gameVariables = new gameVars;//initiates game variables
 	}
+	static constructor(playerString)
+	{
+		//implement game loading
+	}
+
+	static getSeeds()
+	{
+		return this.gameVariables.seeds;//returns seed count from gamevariables
+	}
+	static getCoins()
+	{
+		return this.gameVariables.tatercoins;// returns coin count from game variables
+	}
+
+	static execute()
+	{
+		for(element in this.array)//iterate through elements given per game tick
+		{
+			var ret = object_manager.execute(element);
+			if(ret != 0)
+			{
+				if(ret == -1)
+				{
+					//popup for not enough potatoes to transfer
+				}
+				else if(ret == -2)
+				{
+					//popup for incorrect infastructure to perform the action
+				}
+			}
+		}
+	}
+
+	static objRet(value)//return object at index array
+	{
+		return this.arr[value];// return object
+	}
+
 	static execute( element)
 	{
 		switch(element.id)//execute per tick on passed element
@@ -32,34 +69,10 @@ class object_manager
 				return trukk.run(element)
 		}
 	}
-}
-class object_executor
-{
 
-	static constructor()
+	static transfer(targ, amount)//update store amounts for the objects so they can trade
 	{
-		this.arr = ["Road Placeholder", new farm, new storage, new processing, "market Placeholder"]
+		this.arr[targ].add= amount;
 	}
-	static execute()
-	{
-		for(element in this.array)//iterate through elements given per game tick
-		{
-			var ret = object_manager.execute(element);
-			if(ret != 0)
-			{
-				if(ret == -1)
-				{
-					//popup for not enough potatoes to transfer
-				}
-				else if(ret == -2)
-				{
-					//popup for incorrect infastructure to perform the action
-				}
-			}
-		}
-	}
-	static objRet(value)
-	{
-		return this.arr[value];
-	}
+
 }
