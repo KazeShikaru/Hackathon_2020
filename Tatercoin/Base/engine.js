@@ -74,17 +74,3 @@ function run(game)
 }
 
 
-$(document).ready(function()
-{
-    var game = new Engine();
-
-    console.log("instantiate engine");
-    game.load();
-
-    console.log("load engine");
-    game.init();
-
-    console.log("init engine");
-    setInterval(function() { run(game); }, 16);
-    
-});
