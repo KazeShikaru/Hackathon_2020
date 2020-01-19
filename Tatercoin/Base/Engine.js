@@ -11,16 +11,14 @@
 class Engine
 {
 	//Basic Constructor for Engine
-    function Engine()
+    constructor()
     {
     	this.tick =0;
         this.time = new Timer();
-
-
     }
 
     //Initiates Engine
-    function start()
+    start()
     {
     	setInterval(function() { engine.gameloop(); }, 32);
 
