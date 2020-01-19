@@ -34,15 +34,3 @@ function StorageS(element){
 	}
 	return 0;//return 0 no error.
 }
-
-//Add something to Storage
-function store(type, amount){
-	var storObj = objRet(2);
-	switch(type){
-		case "potato":
-			storObj.potatoes += amount;
-			storObj.hasPotatoes = true;
-			console.log("Added "+amount+" "+type+" to Storage");
-			break;
-	}
-}
