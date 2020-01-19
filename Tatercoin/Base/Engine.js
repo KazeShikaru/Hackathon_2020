@@ -38,10 +38,12 @@ class Engine
     }
 
     //Every Game Loop: Call objectManager execute, Call GUI update
-    gameloop(){
+    gameloop()
+    {
     	objectManager.execute();        
         this.tick++;
-        if(tick%10){
+        if(tick%10)
+        {
         	this.gui.clear();
             this.gui.draw_grid();
         }
