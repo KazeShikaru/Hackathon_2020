@@ -3,11 +3,12 @@ class EventHandler
     constructor()
     {
         this.canvas = document.getElementById('canvas');
-        this.cell_width = 69;
+        this.cell_size = 69;
     }
 
-    init()
+    init(cell_size)
     {
+        this.cell_size = cell_size;
         this.canvas.addEventListener('mousedown', e => {this.getGridPos(canvas, e)})
     }
 

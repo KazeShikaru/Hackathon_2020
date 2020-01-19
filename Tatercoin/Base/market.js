@@ -1,8 +1,8 @@
-class market extends Object
+class Market extends Object
 {
 	constructor()
 	{
 		super(4, "market");
-		add = 0;
+		this.add = 0;
 	}
 }
