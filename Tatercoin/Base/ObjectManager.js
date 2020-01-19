@@ -1,5 +1,5 @@
 class ObjectManager
-{		
+{
 	static build()//constructor for new game
 	{
 		this.arr = ["Road Placeholder", new Farm(), new Storage(), new Processing(), "market Placeholder"];//create new object for each building
@@ -28,9 +28,9 @@ class ObjectManager
 	{
 		return this.gameVariables.tatercoins;// returns coin count from game variables
 	}
-	static addSeeds(seeds)
+	static setSeeds(seeds)
 	{
-		return this.gameVariables.seeds += seeds;// increment seeds by given amount
+		return this.gameVariables.seeds = seeds;// increment seeds by given amount
 	}
 	static addCoins(coin)
 	{
@@ -39,7 +39,7 @@ class ObjectManager
 
 	static execute()
 	{
-		for(element in this.array)//iterate through elements given per game tick
+		for(element in this.arr)//iterate through elements given per game tick
 		{
 			console.log(element);
 			var ret = this.run(element);
@@ -59,7 +59,7 @@ class ObjectManager
 
 	static objRet(value)//return object at index array
 	{
-		return this.array[value];// return object
+		return this.arr[value];// return object
 	}
 
 	//rename this function
@@ -73,15 +73,15 @@ class ObjectManager
 		{
 			case 1:
 			//Run farm script if farm
-				return farm.farmScript(element);
-				
+				return farm.farmS(element);
+
 			case 2:
 			//Run Storage script if Storage
-				return Storage.StorageScript(element);
+				return Storage.StorageS(element);
 
 			case 3:
 			//Run Processing script if Storage
-				return Processing.ProcessingScript(element);
+				return Processing.ProcessingS(element);
 
 			case 4:
 			//Run market script if Market
