@@ -65,7 +65,7 @@
       <!-- Lower Menu (changes with building)-->
       <div id='farm' style='display:none'>
         <H2>Farm</H2>
-        <p id=currentState></p>
+        <p id='currentState'></p>
         <button id='farm-btn' onclick='ObjectManager.objRet(1).clicked = true'>Plant/Harvest</button>
       </div>
       <div id='storage' style='display:none'>

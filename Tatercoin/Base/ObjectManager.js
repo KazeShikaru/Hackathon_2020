@@ -187,7 +187,6 @@ class ObjectManager
     }
 
 		static getStored(){
-			var storeObj = objRet(2);
-			return potatoes;
+			return this.arr[2].potatoes;
 		}
 }

@@ -47,7 +47,7 @@ $(document).ready(function()
 
         case 2: //Storage
         console.log('Setting lower menu to storage');
-        document.getElementById('storage-text').innerText = ObjectManager.getStored();
+        document.getElementById('storage-text').innerText = "Potatoes in storage: " + ObjectManager.getStored();
         storeEl.style.display = "block";
         farmEl.style.display = "none";
         break;
