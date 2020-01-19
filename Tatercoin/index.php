@@ -66,11 +66,11 @@
       <div id='farm' style='display:none'>
         <H2>Farm</H2>
         <p id=currentState></p>
-        <button id='farm-btn' onclick='ObjectManager.objRet(1).clicked = true'>Plant</button>
+        <button id='farm-btn' onclick='ObjectManager.objRet(1).clicked = true'>Plant/Harvest</button>
       </div>
       <div id='storage' style='display:none'>
         <H2>Storage</H2>
-        <p id='storage'>Nothing in storage</p>
+        <p id='storage-text'>Nothing in storage</p>
       </div>
     </div>
 
