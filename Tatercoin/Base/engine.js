@@ -12,16 +12,11 @@ class Engine
 {
     constructor()
     {
-        
+        this.time = new Timer();
         this.grid = new Array(32);
         this.gui = new GUI();
     }
     
-    add_object()
-    {
-
-    }
-
     load()
     {
 
@@ -45,6 +40,8 @@ class Engine
 
         console.log("init gui");
         this.gui.init();
+
+        this.time.restart();
     }
 
     input()
@@ -54,7 +51,7 @@ class Engine
 
     update()
     {
-
+        object_executor.execute();
     }
 
     draw()
@@ -68,9 +65,15 @@ function run(game)
 {
     console.log('run');
 
-    
+    game.update();
 
-    game.draw();
+    if(game.time.get_time_millis() > 100)
+    {
+        game.draw();
+        console.log("drawing.........");
+        game.time.restart();
+    }
+    
 }
 
 
