@@ -53,6 +53,9 @@ class GUI
 
     get_cell_info( x, y)
     { 
+        //void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+        
+
         return document.getElementById("test");
     }
 
@@ -69,8 +72,6 @@ class GUI
         {
             for(var j =0;j<9;j++)
             {
-                
-                    console.log("drawing...")
                     this.context.drawImage(this.get_cell_info(i,j),
                         i*this.cell_size,j*this.cell_size,
                         this.cell_size,this.cell_size);
