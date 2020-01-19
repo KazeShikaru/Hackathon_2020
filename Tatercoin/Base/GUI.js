@@ -91,7 +91,7 @@ class GUI
     				imageSrc = "bin/grass.PNG";
     				break;
     			case 1:
-    				imageSrc = "bin/Test2.PNG";
+    				imageSrc = "bin/farm_1.PNG";
     				break;
     			case 2:
     				imageSrc = "bin/Test3.PNG";
