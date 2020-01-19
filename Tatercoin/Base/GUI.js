@@ -4,21 +4,20 @@ class GUI
     {
     	
         this.canvas = document.getElementById("canvas");
-        this.canvas.width = 971;
-        this.canvas.height = 600;
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
         this.ctx = this.canvas.getContext("2d");
         
-        this.ctx.moveTo(0, 0);
-        this.ctx.lineTo(200, 100);
-        this.ctx.stroke();
-        console.log("hello");
-        
-        this.drawAnImage(64,64,"bin/test_cell.png",
-                64,64);
+
         console.log(this.cell_size);
       
         
                
+    }
+    
+    resetScreenSize(){
+    	 this.canvas.width = window.innerWidth;
+         this.canvas.height = window.innerHeight;
     }
 
     drawAnImage(width, height, color, x, y ) {
@@ -44,18 +43,19 @@ class GUI
 
 
 
-    //gonna remove this later
+    //Prints grid
     draw_grid()
     {
-
-        
+    	var wid =  this.canvas.width -320;
+    	var size = (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
+    	
         for(var i=0;i<16;i++)
         {
             for(var j =0;j<9;j++)
             {
-            		this.drawAnImage(64,
-                        64,"bin/test_cell.png",
-                        i*64,j*64);
+            		this.drawAnImage(size,
+            				size,"bin/test_cell.png",
+                        i*size,j*size);
                     
                 
             }
