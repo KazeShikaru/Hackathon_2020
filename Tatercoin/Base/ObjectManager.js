@@ -74,7 +74,6 @@ class ObjectManager
 		{
 			case "1":
 			//Run farm script if farm
-<<<<<<< HEAD
 				return farmS();
 
 			case "2":
@@ -84,17 +83,6 @@ class ObjectManager
 			case "3":
 			//Run Processing script if Storage
 				return ProcessingS();
-=======
-				return farmS(element);
-
-			case "2":
-			//Run Storage script if Storage
-				return StorageS(element);
-
-			case "3":
-			//Run Processing script if Storage
-				return ProcessingS(element);
->>>>>>> 1d12e61f88540ce0982cc446df497e13a9b0f8ef
 
 			case "4":
 			//Run market script if Market
