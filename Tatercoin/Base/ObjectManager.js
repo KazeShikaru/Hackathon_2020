@@ -4,11 +4,11 @@ class ObjectManager
 	{
 		this.arr = ["Road Placeholder", new Farm(), new Storage(), new Processing(), new Market()];//create new object for each building
 		this.gameVariables = new gameVars();//initiates game variables
-		
-		
-		this.yard = new Yard();
 
-		
+
+		//this.yard = new Yard();
+
+
 	}
 	/*static build(playerString)
 	{
@@ -39,7 +39,7 @@ class ObjectManager
 	static setPlantedSeeds(s){
 		this.arr[1].plantedSeeds = s;
 	}
-	
+
 	static execute()
 	{
 		for(var element in this.arr)//iterate through elements given per game tick
