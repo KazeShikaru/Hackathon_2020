@@ -1,12 +1,10 @@
 
-$('#buy10Seeds').click
-(
-    function(){ObjectManager.buySeeds(10);}
+$('#buy10Seeds').click(
+    ()=>{console.log('yahao');ObjectManager.buySeeds(10);}
 );
 
-$('#buySeeds').click
-(
-    function(){ ObjectManager.buySeeds(1);}
+$('#buySeeds').click(
+    ()=>{ console.log('yahao');ObjectManager.buySeeds(1);}
 );
 
 setInterval(function()
