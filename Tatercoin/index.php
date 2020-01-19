@@ -49,6 +49,7 @@
     </script>
 
     <div id='menu' style='width: 280px; height: 100%; right: 0px;top: 0px;position: absolute; background-color: rgb(139, 139, 139);'>
+      <!-- Upper Menu (game variables seeds and tater coins)-->
       <div style="background-color: rgb(197, 197, 197);margin-left: 5px; margin-right: 5px;">
           <p id="money" style="text-align: right ;font-size: 32px; margin-bottom: 5px; margin-right: 5px; margin-top: 10px;"> 100 ₽</p>
           <p id="seeds" style="text-align: right ;font-size: 32px; margin-top: 5px;margin-right: 5px; margin-bottom: 10px;"> 100 seeds</p>
@@ -61,7 +62,10 @@
           <button onclick="save("+<?php echo $_SESSION['username'].", ".$_SESSION['password'].", "+ObjectManager.getSave() ?>+")">Save File</button>
         </p>
       </div>
+      <!-- Lower Menu (changes with building)-->
+      <div>
+        <p id='lowerMenu'></p>
+      </div>
     </div>
-
 
 </body>
