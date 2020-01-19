@@ -1,8 +1,5 @@
 class ObjectManager
-{
-	var farm = new Farm();
-	
-	
+{		
 	
     constructor(){
     	

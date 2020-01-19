@@ -36,7 +36,7 @@ function storageS(element){
 }
 
 function store(type, amount){
-	var stor = objRet("2");
+	var stor = objRet(2);
 	switch(type){
 		case "potato":
 			stor.potatoes += amount;
