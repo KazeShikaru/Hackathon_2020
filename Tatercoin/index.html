@@ -29,15 +29,16 @@
         <img id="test" src="bin/test_cell.png">
     </div>
     <script>
+    var engine;
+    var objectManager;
     $(document).ready(function()
     		{
-    		    var game = new Engine();
-
-    		    console.log("instantiate engine");
-    		    game.load();
-
-    		    console.log("load engine");
-    		    game.init();
+    		    
+				engine = new Engine();
+    		    console.log("Starting engine");
+    		    engine.start();
+    		    
+    		    objectManager = new ObjectManager();
 
     		    console.log("init engine");
     		    setInterval(function() { run(game); }, 32);

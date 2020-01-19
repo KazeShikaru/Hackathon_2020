@@ -1,4 +1,4 @@
-class object_executor
+class ObjectManager
 {
 
 	static constructor()//constructor for new game

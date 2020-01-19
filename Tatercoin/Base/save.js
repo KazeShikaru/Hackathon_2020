@@ -1,6 +1,7 @@
 //Save function that takes in username password and data parameter and use Ajax to send files to server
 
 
+
 function save(username, password, data) {
 	//initiate request
 	var request;
