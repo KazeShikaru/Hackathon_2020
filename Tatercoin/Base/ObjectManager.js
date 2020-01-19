@@ -2,7 +2,7 @@ class ObjectManager
 {
 	static build()//constructor for new game
 	{
-		this.arr = ["Road Placeholder", new Farm(), new Storage(), new Processing(), "market Placeholder"];//create new object for each building
+		this.arr = ["Road Placeholder", new Farm(), new Storage(), new Processing(), new market()];//create new object for each building
 		this.gameVariables = new gameVars();//initiates game variables
 		this.grid = new Array(16);
 
