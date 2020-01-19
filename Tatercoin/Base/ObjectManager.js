@@ -112,7 +112,9 @@ class ObjectManager
     {
         let x = pos%16;
         let y = Math.floor(pos/16);
-        this.yard.getBuilding(x,y);
+		this.yard.getBuilding(x,y);
+		
+		console.log(1);
     }
 
     static farmClicked()
