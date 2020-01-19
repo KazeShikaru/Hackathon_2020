@@ -86,11 +86,12 @@ class ObjectManager
 
 			case "4":
 			//Run market script if Market
-				return market.marketS();
-
+				return marketS();
+			/*
 			case "5":
 			//trukk
 				return trukk.trukkS(element)
+				*/
 		}
 	}
 
