@@ -13,7 +13,7 @@ function farmS(){
 	{
 		if(!element.planted)
 		{
-			console.log('going to plant');
+			console.log('plansPer: ' + element.plantsPer);
 			plant(element.plantsPer);
 		}
 		else if(element.growProgress == 600)
