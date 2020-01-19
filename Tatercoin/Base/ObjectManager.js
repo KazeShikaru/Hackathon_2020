@@ -171,9 +171,8 @@ class ObjectManager
     }
 
     static farmClicked()
-    {	
+    {
     	currentMenu(1);
-    	this.objRet(1).clicked = true;
     	//console.log("farm clicked");
     }
     static storageClicked()
@@ -182,8 +181,8 @@ class ObjectManager
     	this.objRet(2).clicked = true;
     	console.log("storage clicked");
     }
-    
+
     static getSave(){
-    	
+
     }
 }
