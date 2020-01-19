@@ -34,7 +34,7 @@ function StorageS(element){
 		{
 			element.potatoes -= element.exportMarket;// substract exported
 			ObjectManager.transfer(4, element.exportMarket);//call transfer to finish transfer with 4 for market
-			eleent.exportMarket = 0;
+			element.exportMarket = 0;
 		}
 		else
 		{
