@@ -20,8 +20,11 @@ class EventHandler
         x = event.clientX - rect.left;
         y = event.clientY - rect.top;
 
-        this.gui.clickLocation(
-            (Math.floor(x/this.cell_size) + Math.floor(y/this.cell_size) * 16));
+        aux = (Math.floor(x/this.cell_size) + Math.floor(y/this.cell_size) * 16);
+
+        this.gui.clickLocation(aux);
+        ObjectManager.clickLocation(aux);
+            
     }
     
 }

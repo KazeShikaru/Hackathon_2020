@@ -106,4 +106,11 @@ class ObjectManager
 		console.log(this.arr[targ].potatoes);
 	}
 
+
+	//receives a click
+    static clickLocation(pos)
+    {
+        let x = pos%16;
+        let y = Math.floor(pos/16); 
+    }
 }

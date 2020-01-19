@@ -49,6 +49,13 @@ class GUI
     	
     }
     
+    //receives a click
+    clickLocation(pos)
+    {
+        let x = pos%16;
+        let y = Math.floor(pos/16); 
+    }
+
     // Prints grid
     draw_grid()
     {
