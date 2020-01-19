@@ -78,7 +78,7 @@ class GUI
     
     draw_yard(){
     	this.wid =  this.canvas.width -320;
-    	this.size = (wid/16 > this.canvas.height/9)?this.canvas.height/9:wid/16;
+    	this.size = (this.wid/16 > this.canvas.height/9)?this.canvas.height/9:this.wid/16;
     	var yard = ObjectManager.getYard();
     	console.log(yard);
     	var imageSrc = "";
