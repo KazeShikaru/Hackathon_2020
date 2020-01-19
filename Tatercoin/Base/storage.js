@@ -1,8 +1,6 @@
 class storage extends Object {
   constructor() {
     super(2, "Storage");
-    this.seeds = 0;
-    this.hasSeeds = false;
     this.potatoes = 0;
     this.hasPotatoes = false;
     this.peeledPotatoes = 0;
