@@ -1,12 +1,12 @@
-class ObjectManager
+class object_manager
 {
 
-	static constructor()//constructor for new game
+	static build()//constructor for new game
 	{
 		this.arr = ["Road Placeholder", new farm, new storage, new processing, "market Placeholder"];//create new object for each building
 		this.gameVariables = new gameVars;//initiates game variables
 	}
-	static constructor(playerString)
+	static build(playerString)
 	{
 		//implement game loading
 	}
