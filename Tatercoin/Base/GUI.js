@@ -81,6 +81,10 @@ class GUI
         }
 
     }
+    
+    draw(){
+    	draw_grid();
+    }
 
     
 }
