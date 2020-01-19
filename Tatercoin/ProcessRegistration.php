@@ -1,3 +1,5 @@
+<html>
+<head>
 <?php
 $dbname = "u820020134_potato";
 $username = "u820020134_potato";
@@ -38,3 +40,5 @@ function sanitize($input)
 }
 
 ?>
+</head>
+</html>

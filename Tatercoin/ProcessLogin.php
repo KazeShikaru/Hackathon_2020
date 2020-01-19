@@ -18,18 +18,13 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $row = mysqli_fetch_assoc($result);
     $_SESSION['data'] = $row['data'];
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
+    header("Location: index.php");
+    
 } else {
-    $sql = "INSERT INTO Saves VALUES (" . $username . ", " . $password . ", '');";
-    if ($conn->query($sql) === TRUE) {
-        echo "AccountCreated";
-        $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
-        $_SESSION['loadData'] = true;
-        header("Location: index.php");
-    } else {
-        $_SESSION['fail'] = true;
-        header("Location: Login.php");
-    }
+    $_SESSION['fail'] = true;
+    header("Location: Login.php");
 }
 
 function sanitize($input)
