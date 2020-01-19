@@ -2,7 +2,8 @@ class ObjectManager
 {		
 	static build()//constructor for new game
 	{
-		this.arr = ["Road Placeholder", new farm, new storage, new processing, "market Placeholder"];//create new object for each building
+		console.log(12222);
+		this.arr = ["Road Placeholder", new Farm(), new Storage(), new Processing(), "market Placeholder"];//create new object for each building
 		this.gameVariables = new gameVars;//initiates game variables
 		for(var i=0;i<32;i++)
         {
@@ -13,10 +14,10 @@ class ObjectManager
             }
         }
 	}
-	static build(playerString)
+	/*static build(playerString)
 	{
 		//implement game loading
-	}
+	}*/
 
 	static getSeeds()
 	{
@@ -74,12 +75,12 @@ class ObjectManager
 				return farm.farmScript(element);
 				
 			case 2:
-			//Run storage script if storage
-				return storage.storageScript(element);
+			//Run Storage script if Storage
+				return Storage.StorageScript(element);
 
 			case 3:
-			//Run Processing script if storage
-				return processing.processingScript(element);
+			//Run Processing script if Storage
+				return Processing.ProcessingScript(element);
 
 			case 4:
 			//Run market script if Market

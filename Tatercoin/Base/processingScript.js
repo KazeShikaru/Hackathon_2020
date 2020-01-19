@@ -1,4 +1,4 @@
-function processingS(element)
+function ProcessingS(element)
 {
 	if(element.add > 0)
 	{

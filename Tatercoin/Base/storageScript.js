@@ -1,4 +1,4 @@
-function storageS(element){
+function StorageS(element){
 	if(add > 0)//checks if any potatoes to add
 	{
 		element.potatoes += add;// adds potatoes and resets add count
@@ -8,7 +8,7 @@ function storageS(element){
 	export Market is amount of potatoes to export to the processor,
 	both will be set by the index on click
 	*/
-	if(exportProcess > 0)//if any potatoes to export to processing
+	if(exportProcess > 0)//if any potatoes to export to Processing
 	{
 		if(potatoes >= exportProcess)//makes sure enough potatoes are stored to export
 		{
@@ -35,14 +35,14 @@ function storageS(element){
 	return 0;//return 0 no error.
 }
 
-//Add something to storage
+//Add something to Storage
 function store(type, amount){
 	var storObj = objRet(2);
 	switch(type){
 		case "potato":
 			storObj.potatoes += amount;
 			storObj.hasPotatoes = true;
-			console.log("Added "+amount+" "+type+" to storage");
+			console.log("Added "+amount+" "+type+" to Storage");
 			break;
 	}
 }

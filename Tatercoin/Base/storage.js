@@ -1,4 +1,4 @@
-class storage extends Object {
+class Storage extends Object {
   constructor() {
     super(2, "Storage");
     this.potatoes = 0;
