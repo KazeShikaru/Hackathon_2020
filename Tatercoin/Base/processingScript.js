@@ -1,16 +1,13 @@
-class processingScript
+function processingS(element)
 {
-	function processingS(element)
+	if(element.add > 0)
 	{
-		if(element.add > 0)
-		{
-			element.potatoes += add;
-			add = 0;
-		}
+		element.potatoes += add;
+		add = 0;
+	}
 
-		if(peeling)
-		{
-			potatoes
-		}
+	if(peeling)
+	{
+		potatoes
 	}
 }
