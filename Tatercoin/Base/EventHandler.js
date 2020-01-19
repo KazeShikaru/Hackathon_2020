@@ -17,10 +17,10 @@ class EventHandler
     getGridPos(canvas, event)
     {
         let rect = canvas.getBoundingClientRect(); 
-        x = event.clientX - rect.left;
-        y = event.clientY - rect.top;
+        let x = event.clientX - rect.left;
+        let y = event.clientY - rect.top;
 
-        aux = (Math.floor(x/this.cell_size) + Math.floor(y/this.cell_size) * 16);
+        let aux = (Math.floor(x/this.cell_size) + Math.floor(y/this.cell_size) * 16);
 
         this.gui.clickLocation(aux);
         ObjectManager.clickLocation(aux);
