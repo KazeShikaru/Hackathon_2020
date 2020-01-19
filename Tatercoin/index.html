@@ -31,17 +31,18 @@
     <script>
     var engine;
     var objectManager;
+    var GUI;
     $(document).ready(function()
     		{
-
+				//Constructs Engine
 				engine = new Engine();
-    		    console.log("Starting engine");
     		    engine.start();
-
+    		    
+				//Constructs Object Manager
     		    objectManager = new ObjectManager();
 
-    		    console.log("init engine");
-    		    setInterval(function() { run(game); }, 32);
+    		    //Constructs GUI    		    
+    		    GUI = new GUI();
 
     		});
 

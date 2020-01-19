@@ -14,7 +14,7 @@ class Engine
     {
         this.time = new Timer();
         this.grid = new Array(32);
-        this.gui = new GUI();
+        
     }
     
 
@@ -37,19 +37,14 @@ class Engine
     }
 
     gameloop(){
-    	
-    	
-    }
-    update()
-    {
-        ObjectManager.execute();
-    }
-
-    draw()
-    {
+    	ObjectManager.execute();
         this.gui.clear();
         this.gui.draw_grid();
-    } 
+    	
+    }
+
+
+
 }
 
 function run(game)

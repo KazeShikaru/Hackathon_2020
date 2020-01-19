@@ -1,5 +1,13 @@
 class ObjectManager
 {
+	var farm = new Farm();
+	
+	
+	
+    constructor(){
+    	
+    	
+    }
 
 	static build()//constructor for new game
 	{
@@ -32,7 +40,7 @@ class ObjectManager
 	{
 		for(element in this.array)//iterate through elements given per game tick
 		{
-			var ret = object_manager.execute(element);
+			var ret = ObjectManager.execute(element);
 			if(ret != 0)
 			{
 				if(ret == -1)

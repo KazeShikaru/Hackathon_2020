@@ -1,4 +1,4 @@
-class farm extends Object {
+class Farm extends Object {
   constructor(){
     super(1, "Farm");
     this.growProgress = 0;
