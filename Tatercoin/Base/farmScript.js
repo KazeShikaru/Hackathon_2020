@@ -1,26 +1,18 @@
-module.exports = 
-{
-	run: farm(element, add =0)
-	{
-		if( add != 0)
-		{
-			
-		}
-		if(growAmount < 10 && element.planted = true)
-		{
+module.exports = {
+	run: farm(element){
+		if(growAmount < 10 && element.planted = true){ // If planted, grow
 			element.growAmount += element.growPerTick;
-			return NULL;
+			return null;
 		}
-		else
-		{
+		else { // If fully grown, set harvestable
 			element.harvestable = true;
-			element.onclick = function()
-			{
+			//Harvest
+			element.onclick = function() {
 				element.growAmount = 0;
 				element.planted = false;
 				return 2;
 			}
-			return NULL;
+			return null;
 		}
 	}
 };

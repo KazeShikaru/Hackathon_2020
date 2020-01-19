@@ -1,4 +1,7 @@
 <?php
+    
+$save = $_POST['saveFile']; 
+
 
 function executeQuerry($sql){
     
@@ -22,5 +25,8 @@ function executeQuerry($sql){
     
     $conn->close();
 }
+
+
+
 
 ?>
