@@ -6,7 +6,6 @@ class ObjectManager
 		this.gameVariables = new gameVars();//initiates game variables
 		this.landPos = [0,0];
 		this.yard = new Yard();
-		//console.log(this.yard + " asdfasdfasdf");
 
 	}
 	/*static build(playerString)
@@ -46,10 +45,12 @@ class ObjectManager
 
 
 	//Fuck it
-	static setPlanted(p){
+	static setPlanted(p)
+	{
 		this.arr[1].planted = p;
 	}
-	static setPlantedSeeds(s){
+	static setPlantedSeeds(s)
+	{
 		this.arr[1].plantedSeeds = s;
 	}
 
@@ -64,7 +65,7 @@ class ObjectManager
 
 	static upgradeStorage()
 	{
-		if(this.getCoins >=500)
+		if(this.getCoins >=500 && this.arr[2].autoSell == false)
 		{
 			this.gameVariables.tatercoins -=500;
 			this.arr[2].autoSell = true;
@@ -171,8 +172,9 @@ class ObjectManager
     }
 
     static farmClicked()
-    {
+    {	
     	currentMenu(1);
+    	this.objRet(1).clicked = true;
     	//console.log("farm clicked");
     }
     static storageClicked()
@@ -181,12 +183,8 @@ class ObjectManager
     	this.objRet(2).clicked = true;
     	console.log("storage clicked");
     }
-
+    
     static getSave(){
-
+    	
     }
-
-		static getStored(){
-			return this.arr[2].potatoes;
-		}
 }
